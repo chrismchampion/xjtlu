@@ -42,3 +42,31 @@ You need to write a client and server to implement the following protocol with T
   - Servers replies: SEND <sizeInBytes>\r\n <dataInBinary>
   - Server replies: NOT FOUND\r\n
   - No client reply. Client saves file with name given.
+
+## Goal: To introduce you to simple client/server socket programming with TCP in Python
+
+References:
+https://docs.python.org/3/tutorial/controlflow.html
+https://docs.python.org/3/reference/expressions.html#in
+https://docs.python.org/3/library/socket.html
+https://docs.python.org/3/library/stdtypes.html?highlight=encode#str.encode
+https://docs.python.org/3/library/stdtypes.html?highlight=rstrip#str.rstrip
+
+There are two components of this lab, the client and the server.
+
+The server should do the following:
+
+1. Read in a file called “songList.txt” which contains a list of song titles, one per line. (see the sample songList.txt)
+2. Store these song names in a list
+3.  Create a listening socket on port 4567 and wait for incoming connections (see server.py starter code)
+4. Receive incoming data, and check to see if the song is in your song list.
+5. If you find it, send ‘y’ to the client.  If you don’t, send ‘n’
+6. Close the socket.
+
+The client should do the following:
+
+1. Prompt the user to input a song name
+2. Open a connection to the server on port 4567
+3. Send the song name to the server
+4. Receive the reply from the server (either y or n)
+5. If the song was found, print “Song found”.  If not, print “Song not found”.
