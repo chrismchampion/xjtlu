@@ -72,61 +72,112 @@ The following shows a typical scenario of user interactions with the system (use
 
 
 - Enter your command here: Add
-o Enter student’s name: Ben
-o Coursename:DataStructure
-o Grade:88
-o Anothercoursename(canbeblank):Database
-o Grade:92
-o Anothercoursename(canbeblank):OperatingSystem o Grade:70
-o Anothercoursename(canbeblank):
-New student entered: Ben; Data Structure/88; Database/92; Operating System/70.
-o Note: automatically exit from current level.
- Enter your command here: Add
-o Enter student’s name: Tom
-o Coursename:DataStructure
-o Grade:88
-o Anothercoursename(canbeblank):OperatingSystem o Grade:92
-o Anothercoursename(canbeblank):Database
-o Grade:70
-o Anothercoursename(canbeblank):
-New student entered: Tom, Data Structure/88; Database/92; Operating System/70.
-o Note: automatically exit from current level.
- Enter your command here: Update o Enter student’s name: Tom
-o Coursename:DataStructure o NewGrade:98
-Student: Tom, Data Structure grade updated from 88 to 98.
-o Note: automatically exit from current level.
- Enter your command here: Search o Enterstudent’sname:Tom
-o Course name (can be blank): Data Structure
+  - Enter student’s name: Ben
+  - Course name: Data Structure
+  - Grade:88
+  - Another course name(can be blank): Database
+  - Grade:92
+  - Another course name(can be blank): Operating System
+  - Grade:70
+  - Another course name(can be blank):
 
-Student: Tom, Data Structure/98.
-o Note: automatically exit from current level.
- Enter your command here: Search o Enterstudentname:Tom
-o Course name (can be blank):
-Student: Tom, Data Structure/98; Database/92; Operating System/70; Average/87.
-o Note: automatically exit from current level.
- Enter your command here: List
-o Enter course name: Data Structure
-Data Structure: Anna/98; Tom/98; Ben/88; Average/95.
-o Note: automatically exit from current level.
- Enter your command here: Delete o Enterstudentname:Anna
-o Couse name (can be blank, if blank, delete all courses):
-Student deleted: Anna; Data Structure/98; Database/90; Mathematics/90.
-o Note: automatically exit from current level.
- Enter your command here: Delete o Enter student name: Ben
-o Couse name (can be blank, if blank, delete all courses): Database Course deleted: Ben; Database/90.
-o Note: automatically exit from current level.
- Enter your command here: Search o Enterstudentname:Anna
-No Anna found.
-o Note: automatically exit from current level.  Enter your command here: Quit
- Bye-Bye
+> New student entered: Ben; Data Structure/88; Database/92; Operating System/70.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Add
+  - Enter student’s name: Tom
+  - Course name: Data Structure
+  - Grade:88
+  - Another course name(can be blank): Operating System
+  - Grade: 92
+  - Another course name(can be blank): Database
+  - Grade: 70
+  - Another course name(can be blank):
+
+> New student entered: Tom, Data Structure/88; Database/92; Operating System/70.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Update
+  - Enter student’s name: Tom
+  - Course name: Data Structure
+  - New Grade: 98
+
+> Student: Tom, Data Structure grade updated from 88 to 98.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Search
+  - Enter student’s name: Tom
+  - Course name (can be blank): Data Structure
+
+> Student: Tom, Data Structure/98.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Search
+  - Enter student name:Tom
+  - Course name (can be blank):
+
+> Student: Tom, Data Structure/98; Database/92; Operating System/70; Average/87.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: List
+  - Enter course name: Data Structure
+
+> Data Structure: Anna/98; Tom/98; Ben/88; Average/95.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Delete
+  - Enter student name: Anna
+  - Course name (can be blank, if blank, delete all courses):
+
+> Student deleted: Anna; Data Structure/98; Database/90; Mathematics/90.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Delete
+  - Enter student name: Ben
+  - Course name (can be blank, if blank, delete all courses): Database
+
+> Course deleted: Ben; Database/90.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Search
+  - Enter student name: Anna
+
+> No Anna found.
+
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Quit
+
+> Bye-Bye
+
+
 Take notes on the following:
- Capitalization makes no difference. For example ‘Add and ‘add’ can be considered as the same.
- The above scenario is just an example. It is not the standard format for your system.
- Above scenario did not consider input validation, however in your system, you should validate the
+- Capitalization makes no difference. For example ‘Add and ‘add’ can be considered as the same.
+- The above scenario is just an example. It is not the standard format for your system.
+- Above scenario did not consider input validation, however in your system, you should validate the
 inputs.
- It is up to you to decide what algorithms and data structures to use to keep track of
+- It is up to you to decide what algorithms and data structures to use to keep track of
 Student/Couse/Grade info in the system, and where to find such info.
-What to do during the assessment hour during the due date?
+
+
+### What to do during the assessment hour during the due date?
 a) Sign for attendance.
 b) Demonstrate and explain to the lab demonstrator that your program works for the problems
 prescribed above.
@@ -134,6 +185,8 @@ c) Hand in a well-documented/commented, stapled report (not exceeding 4 pages, w
 your .java files) with the module title and your name/student number shown on the title page. Your report should explain your system structure (UML etc.), what data structures/algorithms (rendered in pseudo code) you have designed and how they are tested, debugged and used in your programs. Explain how error handling is done in your program. You should also analyse the complexity of your data structures and algorithms used. Lastly, sign to declare non-plagiarism.
 
 Please note that at the end of the report you should include an appendix that should contain your .java files.
-Marking
+
+
+## Marking
 Criteria of marking: correctness 45%, documentation, quality and efficiency of the data structures/algorithms used/developed 55%.
 This assignment: 10% of the overall marks.
