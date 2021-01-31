@@ -12,8 +12,8 @@ The following functionality has been implemented in the accompanying CrawlerFina
 3.	Recursion: Additional testing required involving socket timeouts and a larger variety of URLs.
 
 The following assigned objectives were not implemented:
-•	Multithreading
-•	Support of HTTPS over SSL/TLS using the built-in ssl library.
+- Multithreading
+- Support of HTTPS over SSL/TLS using the built-in ssl library.
 
 Sources
 https://docs.python.org/3.7/howto/sockets.html
