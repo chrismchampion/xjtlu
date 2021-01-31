@@ -33,3 +33,43 @@ title and your name/student number shown on the title page. There should be a 1-
 ## Marking & Weightage
 Criteria of marking: correctness 60%, documentation, conciseness, quality and efficiency of the data structures/algorithms used/developed 40%.
 This assignment: 10% of the overall marks.
+
+
+# GenericList<E> Class
+
+
+The **GenericList<E>** class defines the following methods:
+
+## +findMaxMin(int a, int b) : List<E>
+
+Parameters: <E> type parameter; declared before return type for working with List collection elements, int a, int b parameters; find the “a-th” max value and “b-th” min value.
+Return type: List (of E elements)
+
+A new List object “newList” is initialized with the elements of the List that calls the method. This is to preserve the contents of the GenericList object that calls this method. Another List of elements “returnList” is created for holding max/min values. The “newList” object is passed to the Java Collection Framework’s sort() method as a parameter and sorts its elements in ascending order. Since all three GenericLists are type-bound to wrapper classes that implement the Comparable<T> interface, Collections.sort() can be utilized and offers similar performance to a mergesort. Next E max/min objects are initialized with null and the int a/b parameters are checked for validity. If valid, the “a-th” largest and “b-th” smallest element  are retrieved from “newList” and assigned to E max/E min. Finally, E max and E min values are both added to “returnList” and the List is returned.
+
+## +reverse() : List<E>
+
+Parameters: None
+Return type: List (of E elements)
+
+Similar to findMaxMin(), a new List object is created to preserve the original list. The “newList” object is passed as a parameter to the Collection Framework’s reverse() method, which reverses the elements of the specified list in linear time. “newList” is then passed to **removeDuplicates()** and returned.
+
+## -removeDuplicates(List) : List
+
+Parameters: List (of E elements)
+Return type: List (of E elements)
+
+Private class method used in the reverse() and containList() methods. A new LinkedHashSet is initialized with the passed-in List object’s elements. The Set is then returned as a new ArrayList. All duplicate elements of the passed-in list are removed in the LinkedHashSet, since collections that implement the Set<E> interface cannot contain duplicate elements. LinkedHashSet defines a doubly-linked list and was chosen for its performance, which is comparable to List’s add, contains, and remove operations (constant time; O(1)), and because it stores elements in the order of their insertion. For example, HashSet and TreeSet also remove duplicate elements, but HashSet stores elements in random order. TreeSet maintains order, but is slower because of the sorting operation it performs upon element insertion.
+
+## +containList(List) : Boolean
+
+Parameters: List (of E elements)
+Return type: Boolean
+
+This method applies a similar strategy as previously stated, using the removeDuplicates() and Collections.sort() methods. As per this assignment’s requirements, the method prints the passed-in list’s elements (without duplicates) to the console before returning true or false. The Collections.containsAll(Collection<?> c) method is used to generate the Boolean return value and returns true if the GenericList that calls the containList() method contains all of the elements in the passed-in list.
+
+## TestGenericList Class
+The **TestGenericList class** reads from and writes to instances of GenericList.
+The class contains three instances of GenericList, each with a different type parameter (ensures type-safety at runtime by enabling compiler to perform type checking at compile time): GenericList<Integer>, GenericList<String>, GenericList<Boolean>.
+Elements can be added to the lists manually via the console by selecting the “add values” option in the console menu.  User input is parsed from String to Integer (if possible) and added to the <Integer> list, String to Boolean (if possible) and added to the <Boolean> list. Otherwise, added to the <String> list.
+This class tests the findMaxMin(), reverse(), and containList() methods from the GenericList class. The methods can be tested with values input by the user in the console, or with hard-coded values from the Assignment 1 task sheet by choosing the “run with demo data” option from the console menu. Finally, the class contains several print() methods to help maintain the format of console output either when a user enters data manually, or modifies the hard-coded values within the runDemo() method.
