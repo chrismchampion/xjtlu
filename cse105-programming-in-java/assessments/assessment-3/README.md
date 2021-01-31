@@ -94,27 +94,36 @@ In addition to this, you will need to create, in the same project:
 - A class for the input and interface.
 - Any other classes you need.
 
-Examples:
+### Examples:
+
 Well-balanced groups
-Group 1 Group 2 Group 3 Group 4 Group 5
-52 45 49 56 48
+
+| Group 1  | Group 2 | Group 3 | Group 4 | Group 5 |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Skill A: 9 | Skill A: 13 | Skill A: 13 | Skill A: 10 | Skill A: 9 |
+| Skill B: 11 | Skill B: 7 | Skill B: 10 | Skill B: 12 | Skill B: 10 |
+| Skill C: 8 | Skill C: 8 | Skill C: 10 | Skill C: 11 | Skill C: 7 |
+| Skill D: 12 | Skill D: 8 | Skill D: 7 | Skill D: 10 | Skill D: 12 |
+| Skill E: 12 | Skill E: 9 | Skill E: 9 | Skill E: 13 | Skill E: 10 |
+| Total: 52 | Total: 45 | Total: 49 | Total: 56 | Total: 48 |
+
+
 Poorly balanced 1: Totals balance well, but skills within groups completely unbalanced
-Total: 50 Total: 50 Total: 50 Total: 50 Total: 50
-      Skill A: 9 Skill B: 11 Skill C: 8 Skill D: 12 Skill E: 12
-   Skill A: 13 Skill B: 7 Skill C: 8 Skill D: 8 Skill E: 9
-    Skill A: 13 Skill B: 10 Skill C: 10 Skill D: 7 Skill E: 9
-  Skill A: 10 Skill B: 12 Skill C: 11 Skill D: 10 Skill E: 13
-    Skill A: 9 Skill B: 10 Skill C: 7 Skill D: 12 Skill E: 10
-              Skill A: 50 Skill B: 0 Skill C: 0 Skill D: 0 Skill E: 0
-   Skill A: 0 Skill B: 50 Skill C: 0 Skill D: 0 Skill E: 0
-   Skill A: 0 Skill B: 0 Skill C: 50 Skill D: 0 Skill E: 0
-   Skill A: 0 Skill B: 0 Skill C: 0 Skill D: 50 Skill E: 0
-   Skill A: 0 Skill B: 0 Skill C: 0 Skill D: 0 Skill E: 50
+| Group 1  | Group 2 | Group 3 | Group 4 | Group 5 |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Skill A: 50 | Skill A: | Skill A: | Skill A: | Skill A: |
+| Skill B: 0 | Skill B: 50 | Skill B: 0 | Skill B: 0 | Skill B: 0 |
+| Skill C: 0 | Skill C: 0 | Skill C: 50 | Skill C: 0 | Skill C: 0 |
+| Skill D: 0 | Skill D: 0 | Skill D: 0 | Skill D: 50 | Skill D: 0 |
+| Skill E: 0 | Skill E: 0 | Skill E: 0 | Skill E: 0 | Skill E: 50 |
+| Total: 50 | Total: 50 | Total: 50 | Total: 50 | Total: 50 |
        
 Poorly balanced 2: Skills within groups well balanced, totals unbalanced
-       Skill A: 5 Skill B: 4 Skill C: 6 Skill D: 5 Skill E: 3
-   Skill A: 10 Skill B: 12 Skill C: 11 Skill D: 9 Skill E: 10
-   Skill A: 15 Skill B: 14 Skill C: 16 Skill D: 13 Skill E: 17
-   Skill A: 0 Skill B: 2 Skill C: 1 Skill D: 3 Skill E: 0
-   Skill A: 20 Skill B: 18 Skill C: 15 Skill D: 22 Skill E: 20
-  Total: 23 Total: 52 Total: 75 Total: 5 Total: 95
+| Group 1  | Group 2 | Group 3 | Group 4 | Group 5 |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Skill A: 5 | Skill A: 10 | Skill A: 15 | Skill A: 0 | Skill A: 20 |
+| Skill B: 4 | Skill B: 12 | Skill B: 14 | Skill B: 2 | Skill B: 18 |
+| Skill C: 6 | Skill C: 11 | Skill C: 16 | Skill C: 1 | Skill C: 15 |
+| Skill D: 5 | Skill D: 9 | Skill D: 13 | Skill D: 3 | Skill D: 22 |
+| Skill E: 3 | Skill E: 10 | Skill E: 17 | Skill E: 0 | Skill E: 20 |
+| Total: 23 | Total: 52 | Total: 75 | Total: 6 | Total: 95 |
