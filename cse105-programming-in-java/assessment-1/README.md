@@ -56,7 +56,7 @@ input: 90,061
 output: 1 day, 1 hour, 1 minute, 1 second.
 
 
-##Task 4: Game simulation
+## Task 4: Game simulation
 
 Dice simulation
 Program a game played with 4 dice.
@@ -67,7 +67,7 @@ If 4 dice match, the player scores 4 points.
 The program ask whether the user wants to play again. If not, the total score for the game so far is displayed.
 
 
-## Bonus task 4A
+### Bonus task 4A
 
 Display a small window (a Frame) which displays one image each for the four dice in Task 4 above. The images should change to represent the values of the dice in each play. The dice can be standard, with 1 to 6 dots, or pictorial, with a different image on each face. You can draw a dice with dots using the methods of a Graphics object, or you can display an image from file – up to you.
 
