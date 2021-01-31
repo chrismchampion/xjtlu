@@ -1,0 +1,16 @@
+1 .First I created a simplified class diagram for the necessary classes
+2. Started with ImportGraph class to parse node config file based on given example .txt
+3. Parsing algorithm tested (03-initial_test.png)
+
+Routing
+http://www.linfo.org/link_state_routing.html
+https://www.inetdaemon.com/tutorials/internet/ip/routing/dv_vs_ls.shtml
+https://en.wikipedia.org/wiki/Link-state_routing_protocol
+
+Dijkstra
+http://interactivepython.org/courselib/static/pythonds/Graphs/DijkstrasAlgorithm.html
+https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes
+https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/
+https://www.bogotobogo.com/python/python_PriorityQueue_heapq_Data_Structure.php
+Example graph used for testing:
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/

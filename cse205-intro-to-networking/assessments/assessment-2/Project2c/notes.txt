@@ -1,0 +1,63 @@
+1 .First I created a simplified class diagram for the necessary classes
+2. Started with ImportGraph class to parse node config file based on given example .txt
+3. Parsing algorithm tested (03-initial_test.png)
+
+Routing
+http://www.linfo.org/link_state_routing.html
+https://www.inetdaemon.com/tutorials/internet/ip/routing/dv_vs_ls.shtml
+https://en.wikipedia.org/wiki/Link-state_routing_protocol
+
+Dijkstra
+http://interactivepython.org/courselib/static/pythonds/Graphs/DijkstrasAlgorithm.html
+https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes
+https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/
+https://www.bogotobogo.com/python/python_PriorityQueue_heapq_Data_Structure.php
+Example graph used for testing:
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+
+Bellman-Ford
+https://docs.python.org/3.7/library/multiprocessing.html
+
+Multiprocessing
+https://docs.python.org/3.4/library/multiprocessing.html?highlight=process#module-multiprocessing.connection
+
+
+
+1. For each node in graph, spawn separate process "proc"
+
+2. For each proc, establish TCP connection to adjacent nodes using edges from node.adj_list
+	- eg:
+		TCP(Node 1 -> Node 2); TCP(Node 1 -> Node 3)
+		TCP(Node 2 -> Node 3)
+	- each proc starts with local info, i.e. the weight of each edge in node.adj_list
+
+3. Create BF method to exchange vector info, i.e. update_min_distance(node)
+
+4. Once all BF iterations complete, print final distance vector table for each node
+	- initally, all distances set to inf
+	- final table contains shortest distance FROM node TO all other nodes in graph
+
+
+
+First off, to clarify the assignment, you need to take the name of the graph definition file as a command line parameter.
+
+It should be run as "myProgram nodeFile.txt".  Note that there are tabs between the node # and the weight, though most libraries will take care of this for you pretty easily, since a tab is whitespace.
+
+There are many ways to do project 2 part 2, but I thought I'd share some thoughts on how to get started.  In part 2, you need to spawn separate processes and exchange information between them.  To do this, I'd suggest the following approach:
+
+1. In Python, you can spawn a new process with the subprocess library https://docs.python.org/3/library/subprocess.html#module-subprocess
+
+2. One of the things you can do with this library is pass in command line arguments to the programs you run.
+
+3. You need to establish conventions on who starts processes, how processes choose listening ports, and who connects to who. For example you have 3 nodes in your graph.  Who starts the three processes?  What 3 ports will they use?  And for a connection, will node 1 connect to node 2 or node two connect to node 1?  Connections are bidirectional, so you shouldn't make two connections.
+
+4. My suggestion is that you make the syntax for starting a command "myProgram <nodeFile name> <nodeNumber>", with the last parameter being optional.  Then, when the program starts, check the number of parameters.  If there is no node number, then this is node 1.  Then have node 1 read the nodeFile and start the other nodes, but passing in the node number to the other nodes.  For example you would start the second node as "myProgram nodeFile.txt 2".
+
+5. Establish a convention for what ports nodes listen on.  All the processes run on the same machine so an easy one would be something like "Node N's listening port is 1000+N".  This means node 1 listens on 1001, node 2 listens on 1002, etc etc.
+
+6. Establish a convention for who connects to who.  The simplest is the smaller number in a pair connects to the larger number node.  For example, is there is a connection from node 2 to node 3, then node 2 initiates a TCP connection to node 3.  This follows the file format, and makes things simpler.  A node can simply read its part of the file and connect to whatever nodes are in its section.
+
+7. Realize that you may need to wait a bit to connect until everything is started up.  For example if you start node 2 and immediately try to connect to node 3, node 3 may not be running yet. You either need to handle this failure and retry, or just sleep a couple of seconds  and wait for everything to start up.  Remember to start your listened before you sleep or it's pointless...
+
+8. When you connect to a node, it won't know what your node number is.  Probably the first thing you should send is some fixed length string or integer and tell the node who you are.  For example, node 2 connects to node 3, and you send "2" as the first message so node 3 knows this connection is from node 2.  If you make this fixed length, it's easier.  For example 4 bytes.
+
