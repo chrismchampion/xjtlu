@@ -127,3 +127,63 @@ Poorly balanced 2: Skills within groups well balanced, totals unbalanced
 | Skill D: 5 | Skill D: 9 | Skill D: 13 | Skill D: 3 | Skill D: 22 |
 | Skill E: 3 | Skill E: 10 | Skill E: 17 | Skill E: 0 | Skill E: 20 |
 | Total: 23 | Total: 52 | Total: 75 | Total: 6 | Total: 95 |
+
+
+
+# Sorting Algorithm for CSE105 Coursework 3
+
+Name: Christopher Champion
+Student ID: 1719247
+
+When a user selects option **1. Add volunteer** from the program’s main menu, a new volunteer object is created and passed as a parameter to the addVolunteer() method in the SkillSorter class. The addVolunteer() method determines which group the new volunteer should be added to based on its skill set.
+
+The protected method isValidSkillSet() in SkillSorter is used to ensure a skill set is valid before creating a new volunteer.
+
+The static method formatSkillSet() in Volunteer is to return a formatted version (remove spaces, alphabetize, set to upper case) of the skill set string entered by a user before creating a new volunteer.
+
+Sorting volunteers was broken down into the following three cases:
+
+- Homogeneous skill set (e.g., “AAA”, “BBB”, CCC”)
+- Heterogeneous skill set (e.g., “ABC”, CDE”, “ACE”)
+- “1-to-2” / “2-to-1” skill set (e.g., “ABB”, “BBC”)
+
+## Homogeneous skill set (e.g., “AAA”, “BBB”, CCC”)
+
+- Passes the first skill of a volunteer’s skill set to the method private int getGroupIndexLeastSkill(char skill)
+- The method gets the total value of the passed in skill from each of the community groups.
+- The total values are added to a new array.
+- The array of total values is sorted using Arrays.sort().
+- The minimum value is taken from the sorted array’s 0 index.
+- The original total value array is iterated over. As soon as the minimum value is found, its index is returned.
+- The returned index corresponds to the group with the least amount of the passed in skill. The volunteer is then added to that group.
+
+## Heterogeneous skill set (e.g., “ABC”, CDE”, “ACE”)
+
+- Each character is passed to the method private int getGroupIndexLeastSkill(char skill)
+- The method returns the indexes of the three groups with the least amount of that skill (detailed explanation in “Homogeneous skill set”).
+- The skill set and the indexes of the three groups are passed to the method
+private int getGroupIndexCompare(char[] skillChars, int gIndex1, 
+						    int gIndex2, int gIndex3)
+- The method gets the total amount of each skill for the three skills that were passed in from the groups with the least amount of that skill based on the group index arguments.
+- The index of the group with the lowest overall skill is returned.
+
+For example:
+Group 1 : 50 A
+Group 2 : 47 B <-- Is the most needed skill in the skill set.
+Group 3 : 51 C
+
+- The volunteer is added to the group at the returned index, e.g. Group 2 in example.
+
+## “1-to-2” / “2-to-1” skill set (e.g., “ABB”, “BBC”)
+
+- The two unique characters are passed to the method private int getGroupIndexLeastSkill(char skill)
+- The returned ints are assigned to an group index integers (detailed explanation above).
+- The two group indexes and the two skill values are passed to
+private int getGroupIndexCompare(int gIndex1, char skill1, int gIndex2, char skill2, Boolean rightWeighted)
+- The Boolean rightWeighted is used to determine if a skill set is “1-to-2”, e.g. “ABB” or “2-to-1”, e.g. “BBC”.
+
+### For “1-to-2” volunteers, e.g., “ABB”:
+- The index of the two groups with the least amount of each skill is retrieved.
+- If the single skill in group 1 is <= half the double skill in group 2, the volunteer is added to group 1.
+- If group 1 has < 25% the number of total skills of group 2, the volunteer is added to group 1.
+- Otherwise the volunteer is added to group 2. The same logic is applied in reverse for “2-to-1” volunteers, e.g. “BBC”.
