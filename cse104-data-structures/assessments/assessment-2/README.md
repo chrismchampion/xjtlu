@@ -190,3 +190,110 @@ Please note that at the end of the report you should include an appendix that sh
 ## Marking
 Criteria of marking: correctness 45%, documentation, quality and efficiency of the data structures/algorithms used/developed 55%.
 This assignment: 10% of the overall marks.
+
+
+
+
+# Assignment 2 – Grades Program Report
+
+Structures used: ArrayList, HashMap
+Class Synopsis: Grades, Menu, Course, Student, Database (NameGrade (inner class))
+
+## Grades
+- Contains main method which instantiates Grades program.
+- Constructor creates instance of Menu.
+
+## Menu
+- Declares and instantiates instance of Database.
+- Constructor calls run() method.
+- Run method prints menu to the console and waits for user input. Calls Database instance’s add(), update(), search(), ... , methods based on String input into the console. Loops while String input not equal to “quit” (Note: not case sensitive).
+
+## Course
+- Private member variables: String title, double grade;
+- Used to instantiate Course objects.
+- Course object stores title and grade values.
+- Contains getter/setter and toString() methods.
+
+## Student
+- Private member variables: int MAX_COURSE, String name, ArrayList<Course> courseList;
+- Used to instantiate Student objects.
+- Student object stores student name value and list of courses the student is enrolled in.
+- Constant variable MAX_COURSE=5 used to compare against counter when adding courses to student’s course list.
+- Contains getter/Setter methods.
+
+## Database
+- Contains ArrayList of Student objects
+- Contains HashMap of student names (K=key) and an ArrayList of their corresponding courses (V=value). Keys and values are kept in storage “buckets”, with unique keys being mapped to a corresponding value.
+- Contains add(), search(), update(), delete(), list() methods called from menu:
+  - Excluding the list() method, all methods get student name from user and check for its existence as a key value in the HashMap (using .containsKey(pName)) before proceeding.
+  - The .containsKey(Object key) method computes a hash value of the provided pName String and checks if the HashMap contains a key value equal to it. If found, the method returns true. According to the Java API documentation for HashMap, constant-time performance is provided for basic operations like get and put. Since .containsKey() can be equated to a get operation, the time complexity is O(1). 
+- The NameGrade inner class was created in Database and is used in the list() method to create objects that can store a student’s name and the grade of one of the classes they are enrolled in.
+Database class protected (package accessible) methods:
+- #add() : void
+  - Calls addToExistingStudent(pName) if HashMap contains key,
+  - Otherwise calls addNewStudent(pName).
+- #search() : void
+  - Calls searchCourseList(pName) if HashMap contains key
+- #update() :  void
+  - Calls updateCourseGrade(pName) if HashMap contains key
+- #delete() : void
+  - Calls deleteStudent(pName) if HashMap contains key
+- #list() : void
+  - Pseudo code:
+// Get course name from user.
+// Iterate over array list of Student objects  time complexity = O(n).
+// If Student is enrolled in given course, add Student object to new “course enrollment” // array list.  ArrayList add time complexity = O(1), worst-case list copy/resize = O(n).
+// For each Student added to the “course enrollment” list, get their name and the grade // of the corresponding Course and add to new array list of NameGrade objects.
+// Use Collections.sort() with Comparator to sort list by grades (descending) and names // (ascending). [Note: Collections.sort() offers similar performance to a mergesort. Time // complexity = O(n*log(n)).]
+// Print sorted list.
+Database class private (member accessible) methods:
+•	-deleteStudent(String) : void
+o	Called by delete() method.
+o	Pseudo code:
+// Get student object from student list based on user input.
+// Get course title from user.
+// If course title left blank, call the HashMap .remove(K=student name) method
+// to delete the K->V mapping in the map [= O(1)]. Delete the student from the database’s ArrayList of student objects [= O(n)].
+// If course title provided, get the student object’s course list and remove [= O(n)].
+•	-updateCourseGrade(String) : void
+o	Called by update() method.
+o	Pseudo code:
+// Get student object from student list based on user input.
+// Get course title from user.
+// Check if user-selected student is enrolled in user-selected course, if true call Course object’s setGrade(Double) method.
+
+
+•	-searchCourseList(String) : void
+o	Called by search() method.
+o	Pseudo code:
+// Get Student object from student list based on user input.
+// Create new array list to store Course objects specified by user-input if found.
+// Set enrollment counter to 0.
+// Get course title from user.
+// If student is enrolled in course specified by user, add to enrollment list and increment // counter.
+// If counter > 0, print enrollment list; otherwise, print all Courses from student’s course // list.
+•	-addNewStudent(String) : void
+o	Called by add() method.
+o	Pseudo code:
+// Create new Student object and Course objects based on user-input.
+// Must pass condition of not exceeding MAX_COURSE count of 5.
+// Add to student’s course list and update the HashMap using the .put(K=student name, // V=course list) method [=constant time, O(1)].
+// Print student’s course list.
+•	-addToExistingStudent(String) : void
+o	Called by add() method.
+o	Pseudo code:
+// Similar to addNewStudent(String) except the Student object is retrieved by iterating // over the Database class’s Student object ArrayList instead of being created new.
+•	-isEnrolled(String, String) : boolean
+o	Uses HashMap’s get(Object key) method to return the Course list mapped to the passed-in student name key. Returns true if passed-in course title value exists in the list.
+•	-printAverage(ArrayList<E>) : void
+o	Uses generics to call Course.getGrade() or NameGrade.getGrade() depending on the class name of the objects in the passed-in List parameter. Calculates and prints average.
+•	-getStudent(String) : Student
+o	Iterates over the database’s list of student objects. Returns the Student object with matching student name based on passed-in String parameter.
+•	-getCourse(Student, String) : Course
+o	Iterates over a Student object’s list of courses. Returns the course object with matching course name based on passed-in String parameter.
+•	-getCourseTItle() : String
+o	Console input validation method to restrict title using String.equalsIgnoreCase().
+•	-getGrade() : Double
+o	Console input validation method uses try-catch (NumberFormatException)
+•	-getString(String) : String
+o	General console input method using Scanner.nextLine() method.
