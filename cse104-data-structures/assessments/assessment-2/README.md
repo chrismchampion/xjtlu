@@ -50,18 +50,23 @@ The following shows a typical scenario of user interactions with the system (use
   - Grade: 90
   - Another course name(can be blank):
 > New student entered: Anna; Data Structure/98; Database/90.
-  - Note: automatically exit from current level.
+> Note: automatically exit from current level.
 
 - Enter your command here: Add
   - Enter student’s name: Anna
 > Anna is already in the system.
-  - Enter a new course name (can be blank): Data Structure
-Data Structure is already in the system.
-o Enter a new course name (can be blank): Mathematics o Grade:90
-o Enter a new course name (can be blank):
-New course entered: Anna; Data Structure/98; Database/90; Mathematics/90.
-o Note: automatically exit from current level.
- Enter your command here: Add
+
+- Enter a new course name (can be blank): Data Structure
+> Data Structure is already in the system.
+
+- Enter a new course name (can be blank): Mathematics
+  - Grade:90
+  - Enter a new course name (can be blank):
+> New course entered: Anna; Data Structure/98; Database/90; Mathematics/90.
+> Note: automatically exit from current level.
+
+
+- Enter your command here: Add
 o Enter student’s name: Ben
 o Coursename:DataStructure
 o Grade:88
