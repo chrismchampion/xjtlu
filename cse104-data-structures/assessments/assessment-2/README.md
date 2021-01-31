@@ -49,8 +49,11 @@ The following shows a typical scenario of user interactions with the system (use
   - Another course name (can be blank): Database
   - Grade: 90
   - Another course name(can be blank):
+
 > New student entered: Anna; Data Structure/98; Database/90.
+
 > Note: automatically exit from current level.
+
 
 - Enter your command here: Add
   - Enter student’s name: Anna
@@ -62,7 +65,9 @@ The following shows a typical scenario of user interactions with the system (use
 - Enter a new course name (can be blank): Mathematics
   - Grade:90
   - Enter a new course name (can be blank):
+
 > New course entered: Anna; Data Structure/98; Database/90; Mathematics/90.
+
 > Note: automatically exit from current level.
 
 
