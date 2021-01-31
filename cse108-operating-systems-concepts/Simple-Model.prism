@@ -1,0 +1,119 @@
+ctmc
+
+// constants
+const int MAX_COUNT; // max number of consecutive skipped cycles 
+const int MIN_ZFAS = 1; // at least one processor must be working
+// test variables - change in properties
+const int MIN_US_SENSOR = 6;
+const int MIN_360_CAM = 2;
+const int MIN_MID_RADAR = 2;
+
+// rates
+const double lambda_p = 1/(365*24*60*60); // 1 year
+const double lambda_s = 1/(30*24*60*60); // 1 month
+const double lambda_a = 1/(2*30*24*60*60); // 2 months
+const double tau = 1/60; // 1 min
+const double delta_f = 1/(24*60*60); // 1 day
+const double delta_r = 1/30; // 30 secs
+// variable for reboot after transient fault
+//const double lambda_z = 0.9; // p_recovery
+
+// ultrasonic sensors (x12)
+module ultrasonicsensors
+
+	us : [0..12] init 12; // number of sensors working
+	[] us>1 -> us*lambda_s : (us'=us-1); // failure of a single ultrasonic sensor
+
+endmodule
+
+// 360 degree cameras (x4)
+module cameras360
+
+	cam360 : [0..4] init 4; // number of sensors working
+	[] cam360>1 -> cam360*lambda_s : (cam360'=cam360-1); // failure of a 360 degree camera
+
+endmodule 
+
+// front camera (x1)
+module frontcamera
+
+	fc : [0..1] init 1; // 1=ok, 0=failed
+	// if the front camera is working, then there's delta_f chances it will fail
+	[] fc=1 -> delta_f : (fc'=0);
+
+endmodule
+
+// mid-range radar sensor (x4)
+module midradar
+
+	midrad : [0..4] init 4; // number of sensors working
+	[] midrad>1 -> midrad*lambda_s : (midrad'=midrad-1); // failure of a single midradar sensor
+
+endmodule 
+
+// long range radar sensor (x1)
+module longradar
+
+	longrad : [0..1] init 1; // 1=ok, 1=transient fault, 0=failed
+	// if the long range radar is working, then there's delta_f chances it will fail
+	[] longrad=1 -> delta_f : (longrad'=0);
+
+endmodule
+
+// laser scanner lidar (x1)
+module lidar
+
+	lid : [0..1] init 1; // 1=ok, 1=transient fault, 0=failed
+	// if the lidar is working, then there's delta_f chances it will fail
+	[] lid=1 -> delta_f : (lid'=0);
+
+endmodule
+
+// driver observation camera (x1)
+module observationcamera
+
+	obscam : [0..1] init 1; // 1=ok, 1=transient fault, 0=failed
+	[] obscam=1 -> delta_f : (obscam'=0);
+	// if the driver observation camera is working, then there's a delta_f chance
+	// a transient fault will occur
+	//[] obscam=2 -> delta_f : (obscam'=1);
+	// if a transient fault occurs
+	//[] obscam=1 -> p_recovery : obscam'=2 + (1-p_recovery) : count'=+1;
+
+	//if count < max count+1
+
+	//[] obscam=1 -> 0.9 : obscam'=2 + 0.1 : count'=+1;
+	// if obscam == 1 then 
+
+endmodule
+
+// zFAS central driver assistance controller (x2 - main and backup)
+module zFAS
+	
+	zfas : [0..2] init 2; // 2 processors available
+	[] zfas>0 -> lambda_s : (zfas'=zfas-1); // only one processor needs to be available
+		// lambda_s chances a processor will fail
+
+endmodule
+
+// the system is down
+//formula down = (i=2&s<MIN_SENSORS)|(count=MAX_COUNT+1)|(o=2&a<MIN_ACTUATORS)|(m=0);
+formula down = (zfas<MIN_ZFAS) | (us<MIN_US_SENSOR) | (cam360<MIN_360_CAM) | (midrad<MIN_MID_RADAR)
+		| fc=0 | longrad=0 | lid=0 | obscam=0;
+// transient failure has occured but the system is not down
+//formula danger = !down & (i=1 | o=1);
+// the system is operational
+formula up = !down;
+
+// reward structures
+
+rewards "up"
+	up : 1/3600;
+endrewards
+
+//rewards "danger"
+//	danger : 1/3600;
+//endrewards
+rewards "down"
+	down : 1/3600;
+endrewards

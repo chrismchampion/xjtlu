@@ -1,0 +1,133 @@
+ctmc
+
+// constants 
+const int MIN_ZFAS = 1; // at least one processor must be working
+const int MIN_US_SENSOR = 10;
+const int MIN_360_CAM = 3;
+const int MIN_MID_RADAR = 3;
+
+// rates
+const double lambda_s = 1/(30*24*60*60); // 1 month
+const double lambda_a = 1/(2*30*24*60*60); // 2 months
+const double delta_f = 1/(24*60*60); // 1 day
+
+// ultrasonic sensors (x12)
+module ultrasonicsensors
+
+	us : [0..12] init 12; // number of sensors working
+	[] us>1 -> us*lambda_s : (us'=us-1); // failure of a single ultrasonic sensor
+	// system requires minimum of 10 working sensors 
+
+endmodule
+
+// 360 degree cameras (x4)
+module cameras360
+
+	cam360 : [0..4] init 4; // number of sensors working
+	[] cam360>1 -> cam360*lambda_s : (cam360'=cam360-1); // failure of a 360 degree camera
+	// system requires minimum of 3 working 360 degree cameras
+
+endmodule 
+
+// front camera (x1)
+module frontcamera
+
+	// WITH TRANSIENT FAULT
+	fc : [0..2] init 2; // 2=ok, 1=transient fault, 0=failed
+	// if the front camera is working, then there's delta_f probability it will fail
+	[] fc=2 -> delta_f : (fc'=1);
+	// if transient fault occurs, reboot front camera
+	[rebootfc] fc=1 -> 0.85: (fc'=2) + 0.15 : (fc'=0);
+	// after reboot, front camera has 85% chance of recovery, 15% chance of failure -> system shutdown
+
+	// WITHOUT TRANSIENT FAULT
+	//fc : [0..1] init 1; // 1=ok, 0=failed
+	//[] fc=1 -> delta_f : (fc'=0);
+
+endmodule
+
+// mid-range radar sensor (x4)
+module midradar
+
+	midrad : [0..4] init 4; // number of sensors working
+	[] midrad>1 -> midrad*lambda_s : (midrad'=midrad-1); // failure of a single midradar sensor
+	// system requires minimum of 3 working mid-range radar sensors
+
+endmodule 
+
+// long range radar sensor (x1)
+module longradar
+
+	// WITH TRANSIENT FAULT
+	longrad : [0..2] init 2; // 2=ok, 1=transient fault, 0=failed
+	// if the long-range radar is working, then there's delta_f probability it will fail
+	[] longrad=2 -> delta_f : (longrad'=1);
+	// if transient fault occurs, reboot long-range radar
+	[rebootlr] longrad=1 -> 0.9: (longrad'=2) + 0.1: (longrad'=0);
+	// after reboot, long-range radar has 90% chance of recovery, 10% change of failure -> system shutdown
+
+	// WITHOUT TRANSIENT FAULT
+	//longrad : [0..1] init 1; // 1=ok, 0=failed
+	//[] longrad=1 -> delta_f : (longrad'=0);
+
+endmodule
+
+// laser scanner lidar (x1)
+module lidar
+
+	// WITH TRANSIENT FAULT
+	lid : [0..2] init 2; // 2=ok, 1=transient fault, 0=failed
+	// if the lidar is working, then there's delta_f probability it will fail
+	[] lid=2 -> delta_f : (lid'=1);
+	// if transient fault occurs, reboot lidar
+	[rebootlid] lid=1 -> 0.80 : (lid'=2) + 0.20 : (lid'=0);
+	// after reboot, lidar has 80% chance of recovery, 20% chance of failure -> system shutdown
+
+	// WITHOUT TRANSIENT FAULT
+	//lid : [0..1] init 1; // 1=ok, 0=failed
+	//[] lid=1 -> delta_f : (lid'=0);
+
+endmodule
+
+// driver observation camera (x1)
+module observationcamera
+
+	// WITH TRANSIENT FAULT
+	obscam : [0..2] init 2; // 2=ok, 1=transient fault, 0=failed
+	// if the observation camera is working, then there's delta_f probability it will fail
+	[] obscam=2 -> delta_f : (obscam'=1);
+	// if transient fault occurs, reboot observation camera
+	[rebootobscam] obscam=1 -> 0.95 : (obscam'=2) + 0.05 : (obscam'=0);
+	// after reboot, observation camera has 95% change of recovery, 35% chance of failure -> system shutdown
+	
+	// WITHOUT TRANSIENT FAULT
+	//obscam : [0..1] init 1; //1=ok, 0=failed
+	//[] obscam=1 -> delta_f : (obscam'=0);
+
+endmodule
+
+// zFAS central driver assistance controller (x2 - main and backup)
+module zFAS
+	
+	zfas : [0..2] init 2; // 2 processors available
+	[] zfas>0 -> lambda_a : (zfas'=zfas-1); // only one processor needs to be available
+		// lambda_a chances a processor will fail
+
+endmodule
+
+// labels
+// conditions for system shutdown
+label "down" = (zfas<MIN_ZFAS) |
+		(us<MIN_US_SENSOR) |
+			(cam360<MIN_360_CAM) |
+				(midrad<MIN_MID_RADAR)
+					| fc=0 | longrad=0 | lid=0 | obscam=0;
+// conditions for testing individual modules
+label "zfas_down" = (zfas<MIN_ZFAS);
+label "us_down" = (us<MIN_US_SENSOR);
+label "cam360_down" = (cam360<MIN_360_CAM);
+label "midrad_down" = (midrad<MIN_MID_RADAR);
+label "fc_down" = fc=0;
+label "longrad_down" = longrad=0;
+label "lid_down" = lid=0;
+label "obscam_down" = obscam=0;
