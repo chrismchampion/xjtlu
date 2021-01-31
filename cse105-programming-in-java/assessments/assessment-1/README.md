@@ -13,7 +13,19 @@ You program should:
 - Ask the user for an input range [eg 1-10]
 - Print a labeled and formatted table showing the values for this range, eg
 
-Fathoms Metres
+| Fathoms  | Metres |
+| ------------- | ------------- |
+| 1  | 1.8288  |
+| 2  | ......  |
+| 3  | ......  |
+| 4  | ......  |
+| 5  | ......  |
+| 6  | ......  |
+| 7  | ......  |
+| 8  | ......  |
+| 9  | ......  |
+| 10  | 18.288  |
+
 1 1.8288
 2 ......
 3 ......
@@ -23,7 +35,7 @@ Fathoms Metres
 7 .....
 8 ......
 9 ......
-10 18.288
+10 
 
 
 ## Task 2: A Story
