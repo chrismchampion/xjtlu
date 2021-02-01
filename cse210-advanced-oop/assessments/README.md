@@ -7,12 +7,6 @@
 
 ## Marking Sheet
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-
 <table>
   <tr>
     <th colspan="2">Component</th>
@@ -20,7 +14,58 @@
     <th>Weight</th>
   </tr>
   <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
     <td>Four</td>
-    <td>Five</td>
   </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    <td>Four</td>
+  </tr>
+
 </table>
