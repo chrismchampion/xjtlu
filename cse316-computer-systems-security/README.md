@@ -36,7 +36,7 @@ Wireless Body Area Networks (WBAN) can be conceptually compared to potentially m
 
 IEEE 802.15.6 is the current international standard for WBANs. As compared to the IEEE 802.11 WLAN standard, it documents the specification of, e.g. frequency bands for WBAN device communications approved by national medical and governing regulatory authorities.[3] For example, the 2009 standard 802.15.4 was amended as 802.15.4c to support additional frequency bands to comply with Chinese regulations for using within P.R. China.[4] At its core, 802.15.6 applies four elliptic curve-based key agreement protocols with the goal of providing established network security concepts—namely confidentiality, authentication, integrity, privacy protection, and replay defense—in WBANs.[5] All four ECDH-based protocols have all been shown to be vulnerable to various attacks including man-in-the-middle, impersonation, and offline dictionary attacks.[5], [6]
 
-![Figure 1](/img/fig-1.png "Figure 1")
+![Figure 1](img/fig-1.png "Figure 1")
 > *Figure 1: Password authenticated association procedure[7]*
 
 This implementation targets the IEEE 802.15.6 standard’s password authenticated key exchange (PAKE) ECDH-based protocol, also known as IEEE 802.15.6 Password Authenticated Association (PW-AKE), in which a sensor/initiator node (A) and hub/responder node (B) both contribute information, i.e. use public and private key keypairs and scalar multiplication to generate an agreed upon shared secret master key MK. This procedure is depicted in Figure 1. From a security standpoint, this is beneficial over using a key transport protocol since, as such, a single point of attack exists when one party alone is responsible for generating the secret master key MK.
