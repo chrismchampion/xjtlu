@@ -62,9 +62,14 @@ Further methods for improving the security of the protocol have been researched.
 
 [2]	B. Latré, B. Braem, I. Moerman, C. Blondia, and P. Demeester, “A survey on wireless body area networks,” Wirel. Networks, vol. 17, no. 1, pp. 1–18, 2011.
 
-[3]	IEEE, “802.15.6-2012 - IEEE Standard for Local and metropolitan area networks - Part 15.6: Wireless Body Area Networks.” .
+[3]	IEEE, “802.15.6-2012 - IEEE Standard for Local and metropolitan area networks - Part 15.6: Wireless Body Area Networks.”.
+
 [4]	IEEE, “802.15.4c-2009 - IEEE Standard for Information technology-- Local and metropolitan area networks-- Specific requirements-- Part 15.4: Amendment 2: Alternative Physical Layer Extension to support one or more of the Chinese 314-316 MHz, 430-434 MHz, and 779.”
+
 [5]	Mohsen Toorani, “On Vulnerabilities of the Security Association in the IEEE 802.15.6 Standard,” vol. 8976, no. October 2016, pp. 49–62, 2015.
+
 [6]	J. Zhang, N. Xue, and X. Huang, “A Secure System for Pervasive Social Network-Based Healthcare,” IEEE Access, vol. 4, no. c, pp. 9239–9250, 2016.
+
 [7]	Mohsen Toorani, “Security analysis of the IEEE 802.15.6 standard,” Int. J. Commun. Syst., vol. 23, no. 5, pp. 633–652, 2010.
+
 [8]	J. Zhang, X. Huang, P. Craig, A. Marshall, and D. Liu, “An Improved Protocol for the Password Authenticated Association of IEEE 802.15.6 Standard That Alleviates Computational Burden on the Node,” Symmetry (Basel)., vol. 8, no. 11, p. 131, 2016.
