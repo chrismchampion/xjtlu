@@ -20,7 +20,7 @@
     <td>15%</td>
   </tr>
   <tr>
-    <td rowspan="7">One</td>
+    <td rowspan="7">Implementation and demonstration</td>
     <td>Task 2</td>
     <td>Efficiency and robustness, code execeution during demonstration</td>
     <td>15%</td>
