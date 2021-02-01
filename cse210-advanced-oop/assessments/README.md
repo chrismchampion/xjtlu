@@ -21,5 +21,7 @@
   </tr>
   <tr>
     <td colspan="2">Three</td>
+    <td>Four</td>
+    <td>Five</td>
   </tr>
 </table>
