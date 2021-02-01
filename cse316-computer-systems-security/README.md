@@ -43,6 +43,7 @@ This implementation targets the IEEE 802.15.6 standard’s password authenticate
 
 An abstracted version of the standard key exchange procedure focusing on the protocol’s message passing sequence has been implemented and is depicted in Figure 2, allowing for a visual comparison to the standard procedure. Each operation below is equally labeled as such within the code files. 
 
+![Figure 2](img/fig-2.png "Figure 2")
 > *Figure 2: Implementation – Abstracted protocol procedure*
 
 ## Experiment Environment
@@ -51,8 +52,10 @@ The implementation was developed using Python3 using the included ecc python lib
 
 ## Results
 
+![Figure 3](img/fig-3.png "Figure 3")
 > *Figure 3: Results – Initiator node A*
 
+![Figure 4](img/fig-4.png "Figure 4")
 > *Figure 4: Results – Responder node B*
 
 Further methods for improving the security of the protocol have been researched. For example, via the introduction of two random values chosen by the initiator (A) and responder (B), thus allowing for the obfuscation of the initiating node’s public key throughout the protocol’s complete sequence.[8]
