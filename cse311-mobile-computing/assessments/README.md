@@ -1,4 +1,4 @@
-# Coursework details
+# CSE311 Mobile Computing Coursework Details
 
 
 This coursework is based on the lab task of Lecture 13.
