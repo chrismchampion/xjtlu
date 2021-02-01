@@ -36,5 +36,18 @@ Using ```SurfaceView```, draw a bouncing ball that keeps bouncing inside the Sur
 
 ## Week 10: Nov. 11 - Nov. 17, 2019
 
+1. Try to collect gravity sensor data.
+2. Test GPS location. 
+
 
 ## Week 11: Nov. 18 - Nov. 24, 2019
+
+Server Sockets:
+- On a real server, you should create a new thread to handle each ```Socket``` returned from ```accept()```.
+- This allows your server to handle multiple client requests.
+
+```
+ServerSocket server = new ServerSocket(1024);
+Socket socket = server.accept();
+// create new thread and handle the connection.
+```
