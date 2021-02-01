@@ -59,7 +59,9 @@ Further methods for improving the security of the protocol have been researched.
 ## References
 
 [1]	H. Khan, B. Dowling, and K. M. Martin, “Highly Efficient Privacy-Preserving Key Agreement for Wireless Body Area Networks,” in 2018 17th IEEE International Conference On Trust, Security And Privacy In Computing And Communications/ 12th IEEE International Conference On Big Data Science And Engineering (TrustCom/BigDataSE), 2018, pp. 1064–1069.
+
 [2]	B. Latré, B. Braem, I. Moerman, C. Blondia, and P. Demeester, “A survey on wireless body area networks,” Wirel. Networks, vol. 17, no. 1, pp. 1–18, 2011.
+
 [3]	IEEE, “802.15.6-2012 - IEEE Standard for Local and metropolitan area networks - Part 15.6: Wireless Body Area Networks.” .
 [4]	IEEE, “802.15.4c-2009 - IEEE Standard for Information technology-- Local and metropolitan area networks-- Specific requirements-- Part 15.4: Amendment 2: Alternative Physical Layer Extension to support one or more of the Chinese 314-316 MHz, 430-434 MHz, and 779.”
 [5]	Mohsen Toorani, “On Vulnerabilities of the Security Association in the IEEE 802.15.6 Standard,” vol. 8976, no. October 2016, pp. 49–62, 2015.
