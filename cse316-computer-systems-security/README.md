@@ -22,3 +22,8 @@ Total points: 100 (contribute 20% to the overall assessment)
 | Testing  | 30 |
 | Quality of implementation  | 20 |
 | Quality of report  | 20 |
+
+## Submission
+
+Each student should submit a short report and codes to ICE, without coursework cover.
+Deadline: Sunday, 17 May 2020, 23:59
