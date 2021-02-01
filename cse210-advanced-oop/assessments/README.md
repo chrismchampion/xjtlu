@@ -14,7 +14,7 @@
     <th>Weight</th>
   </tr>
   <tr>
-    <td>One</td>
+    <td>Code design with good style and practice</td>
     <td>Task 1</td>
     <td>object orientation, source code, functional decomposition, exception handling,  data structures</td>
     <td>15%</td>
@@ -62,7 +62,7 @@
     <td>-</td>
   </tr>
   <tr>
-    <td>One</td>
+    <td>Documentation</td>
     <td>Task 4</td>
     <td>proper javadoc</td>
     <td>15%</td>
