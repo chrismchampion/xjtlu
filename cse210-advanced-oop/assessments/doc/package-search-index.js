@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"cn.edu.xjtlu.csse.cchampion17.cw1.data"},{"l":"cn.edu.xjtlu.csse.cchampion17.cw1.obj"},{"l":"cn.edu.xjtlu.csse.cchampion17.cw1.search"},{"l":"cn.edu.xjtlu.csse.cchampion17.cw1.testing"}]
