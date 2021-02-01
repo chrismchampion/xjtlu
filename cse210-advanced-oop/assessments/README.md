@@ -48,17 +48,17 @@ You need to design a number of information objects to represent the objects toge
 
 ## 2. Requirements and Tasks
 You need to complete the following tasks. 
-- T1: develop information objects and helper classes (with their methods) needed for this application with good coding style, and design an easy-to-use interface for testing (command window is enough).
-- T2: efficiency and robustness (assessed during program testing).
-- T3: complete the following tasks which will be checked and marked during the demonstration sessions. 
+- **T1:** develop information objects and helper classes (with their methods) needed for this application with good coding style, and design an easy-to-use interface for testing (command window is enough).
+- **T2:** efficiency and robustness (assessed during program testing).
+- **T3:** complete the following tasks which will be checked and marked during the demonstration sessions. 
 Note: FAILING TO PRESENT AT THE DEMONSTRATION SESSION WILL RESULT IN ZERO MARK FOR THE DEMONSTRATION PART (SEE MARKING SCHEME).
-  - T3-1: load data in the program.
+  - __T3-1__: load data in the program.
   - T3-2: print top 10 tweets. Tweets should be ranked based on the sum of: (1) number of users who like the tweet (Favs), and (2) number of users who re-tweet the tweet (RTs). Relevant information, such as when, and by whom it is published, should also be shown.
   - T3-3: print top 10 users. Users should be ranked based on the number of followers that they have.
   - T3-4: tweet search based on string matching.
   - T3-5: tweet search based on full text searching using Lucene.
-- T4: use Javadoc comments to document your codes and generate HTML javadoc.
-- T5: demonstrate your work in the same order as specified in the lab group file (note that the time for each demonstration varies and you probably need to wait a bit longer than expected). You might be asked to modify your code during the demonstration (to detect plagiarism). The ability to modify code is measured in percentage and marks for demonstration will be scaled. Being able to modify code according to requirements will get 100%, not able to modify anything (will report for potential plagiarism) will get 0%. Other cases will be considered accordingly. Feedback will be provided during the demonstration if possible.
+- **T4:** use Javadoc comments to document your codes and generate HTML javadoc.
+- **T5:** demonstrate your work in the same order as specified in the lab group file (note that the time for each demonstration varies and you probably need to wait a bit longer than expected). You might be asked to modify your code during the demonstration (to detect plagiarism). The ability to modify code is measured in percentage and marks for demonstration will be scaled. Being able to modify code according to requirements will get 100%, not able to modify anything (will report for potential plagiarism) will get 0%. Other cases will be considered accordingly. Feedback will be provided during the demonstration if possible.
 
 ## 3. Deliverables
 You should deliver ONE FILE (via ICE) according to the following description.
