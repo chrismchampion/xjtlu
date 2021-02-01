@@ -12,16 +12,11 @@
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
 
 <table>
   <tr>
-    <td>One</td>
-    <td>Two</td>
+    <th>One</th>
+    <th>Two</th>
   </tr>
   <tr>
     <td colspan="2">Three</td>
