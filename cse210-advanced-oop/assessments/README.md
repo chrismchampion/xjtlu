@@ -50,9 +50,9 @@ You need to design a number of information objects to represent the objects toge
 You need to complete the following tasks. 
 - **T1:** develop information objects and helper classes (with their methods) needed for this application with good coding style, and design an easy-to-use interface for testing (command window is enough).
 - **T2:** efficiency and robustness (assessed during program testing).
-- **T3:** complete the following tasks which will be checked and marked during the demonstration sessions. 
-Note: FAILING TO PRESENT AT THE DEMONSTRATION SESSION WILL RESULT IN ZERO MARK FOR THE DEMONSTRATION PART (SEE MARKING SCHEME).
-  - __T3-1__: load data in the program.
+- **T3:** complete the following tasks which will be checked and marked during the demonstration sessions.
+**Note: FAILING TO PRESENT AT THE DEMONSTRATION SESSION WILL RESULT IN ZERO MARK FOR THE DEMONSTRATION PART (SEE MARKING SCHEME).**
+  - *T3-1:* load data in the program.
   - T3-2: print top 10 tweets. Tweets should be ranked based on the sum of: (1) number of users who like the tweet (Favs), and (2) number of users who re-tweet the tweet (RTs). Relevant information, such as when, and by whom it is published, should also be shown.
   - T3-3: print top 10 users. Users should be ranked based on the number of followers that they have.
   - T3-4: tweet search based on string matching.
