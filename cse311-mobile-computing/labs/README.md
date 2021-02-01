@@ -3,7 +3,7 @@
 ## Week 1: Sep. 2 - Sep. 8, 2019
 
 Can you implement for loops using only functions?
-> forLoop(???, ???, ???);
+```forLoop(???, ???, ???);```
 
 You are allowed to add helper classes.
 
