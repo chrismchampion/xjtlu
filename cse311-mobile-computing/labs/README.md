@@ -26,7 +26,7 @@ Use SharedPreferences to record:
 - How many times your app has been launched (ie, the onCreate() method called).
 - How many times your app has been shown on the screen (ie, the onStart() method called).
 
-Build you own database to record contact information (left for you to practice after lab)
+Build you own database to record contact information (left for you to practice after lab).
 
 
 ## Week 8: Oct. 28 - Nov. 3, 2019
