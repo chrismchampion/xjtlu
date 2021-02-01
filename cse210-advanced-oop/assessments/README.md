@@ -2,6 +2,21 @@
 ### Release date: 11th, Mar, 2019 | Deadline: 12:00PM, 23rd, Apr, 2019
 
 
+## Importing the project into Eclipse
+
+1. Unzip archive file 1719247_CSE210_CW1_Final.zip
+2. Create a new project
+3. File > Import > File System
+
+- From directory:
+  - Select unzipped archive file directory to import from: 1719247_CSE210_CW1_Final
+- Into folder:
+  - Select newly created project's src fodler.
+- Click Finish.
+
+4. Add .jar referenced libaries to classpath.
+5. Add twitter dataset .xlsx file path to main(String args) arg[0].
+
 ## Marking Guidelines Classification
 - A first-class solution (70+%) will meet all these requirements fully; 
 - A 2.I solution (60-69%) will meet most but perhaps not all of these requirements (e.g., the code may not quite implement all the desired functionality, or may lack comments, or have an untidy layout); 
