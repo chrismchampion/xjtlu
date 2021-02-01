@@ -15,8 +15,9 @@
 
 <table>
   <tr>
-    <th>One</th>
-    <th>Two</th>
+    <th colspan="2">Component</th>
+    <th>Description</th>
+    <th>Weight</th>
   </tr>
   <tr>
     <td colspan="2">Three</td>
