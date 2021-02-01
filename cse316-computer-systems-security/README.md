@@ -43,7 +43,7 @@ This implementation targets the IEEE 802.15.6 standard’s password authenticate
 
 An abstracted version of the standard key exchange procedure focusing on the protocol’s message passing sequence has been implemented and is depicted in Figure 2, allowing for a visual comparison to the standard procedure. Each operation below is equally labeled as such within the code files. 
 
-![Figure 2](img/fig-2.png "Figure 2")
+![Figure 2](img/fig-2.png?raw=true "Figure 2")
 > *Figure 2: Implementation – Abstracted protocol procedure*
 
 ## Experiment Environment
