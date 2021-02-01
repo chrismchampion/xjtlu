@@ -8,17 +8,17 @@ The objective of the coursework is to develop a practical application for data p
 The coursework uses a subset of the dataset (file name: twitterDataset.xlsx) published at http://followthehashtag.com/. It contains 204,820 short messages (tweets) collected from Twitter (https://twitter.com), during the period of 14-16, April, 2016, from various locations in the United States. The dataset contains many different topics, e.g., weather, leisure, sports, etc.
 
 The dataset is stored in an EXCEL file and needs to be processed from your Java program. Each record (row) contains information about a tweet. The columns are explains as follows. 
-•	Tweet Id – the ID of a tweet
-•	Date – the date on which a tweet is published
-•	Hour – the time when a tweet is published
-•	User Name – name of a user
-•	Nickname – nickname of a user
-•	Tweet content – the actual message
-•	Favs – number of users who like the tweet
-•	RTs – number of users who re-tweet the tweet (republish)
-•	Latitude – latitude of the location where a tweet is published
-•	Longitude – longitude of the location where a tweet is published
-•	Followers – number of followers of a user (the values are the same for the same user) = NOT TRUE; the value changes over time
+- Tweet Id – the ID of a tweet
+- Date – the date on which a tweet is published
+- Hour – the time when a tweet is published
+- User Name – name of a user
+- Nickname – nickname of a user
+- Tweet content – the actual message
+- Favs – number of users who like the tweet
+- RTs – number of users who re-tweet the tweet (republish)
+- Latitude – latitude of the location where a tweet is published
+- Longitude – longitude of the location where a tweet is published
+- Followers – number of followers of a user (the values are the same for the same user) = NOT TRUE; the value changes over time
 
 ### 1. 2. Data Processing and Analysis
 To process data stored in an EXCEL file, you can use the Apache POI (the Java API for Microsoft Documents) library. The API is available at:
