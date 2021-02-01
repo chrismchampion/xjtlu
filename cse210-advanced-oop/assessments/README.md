@@ -2,8 +2,13 @@
 ### Release date: 11th, Mar, 2019 | Deadline: 12:00PM, 23rd, Apr, 2019
 
 
-
-
+## Marking Guidelines Classification
+- A first-class solution (70+%) will meet all these requirements fully; 
+- A 2.I solution (60-69%) will meet most but perhaps not all of these requirements (e.g., the code may not quite implement all the desired functionality, or may lack comments, or have an untidy layout); 
+- A 2.II solution (50-59%) will probably have some more serious faults (e.g., the code may fall some way short of all the desired functionality, or may contain syntactic errors); 
+- A third-class (40-49%) solution will have serious faults, though it should still show that a decent attempt was made (e.g., code that falls further short of being functional - though it still shouldn't be too far away). 
+- A solution getting a failing grade will simply be bad. 
+- Failure to hand in a solution or plagiarised work will get a zero grade.
 
 ## Marking Sheet
 
@@ -22,7 +27,7 @@
   <tr>
     <td rowspan="7">Implementation and demonstration</td>
     <td>Task 2</td>
-    <td>Efficiency and robustness, code execeution during demonstration</td>
+    <td>efficiency and robustness, code execeution during demonstration</td>
     <td>15%</td>
   </tr>
   <tr>
