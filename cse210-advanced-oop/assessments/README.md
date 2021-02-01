@@ -40,11 +40,11 @@ Effective tweet searching is an important functionality for users, especially wh
 It is important to follow good object-oriented programming principles and practice, e.g., object modelling, functionality decomposition, code reuse. At the same time, you need to ensure correctness and take robustness and efficiency into account. 
 
 You need to design a number of information objects to represent the objects together with the methods for this application. You need to design a number of helper classes in order to realise the functionalities. A separate class for testing purposes is also needed. Below is an example about the objects for this coursework; however, you can have your own design following good programming practice and style.
-•	Tweet – represents a tweet message;
-•	User – represents a user of the Twitter.
-•	LinkedList – represents a list of (sorted) objects.
-•	Utility and helper classes – as needed for data processing, analysis, and content search.
-•	Test class – for testing the implemented functionalities.
+- Tweet – represents a tweet message;
+- User – represents a user of the Twitter.
+- LinkedList – represents a list of (sorted) objects.
+- Utility and helper classes – as needed for data processing, analysis, and content search.
+- Test class – for testing the implemented functionalities.
 
 ## 2. Requirements and Tasks
 You need to complete the following tasks. 
