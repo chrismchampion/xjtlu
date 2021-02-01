@@ -1,5 +1,5 @@
 # CSE210 Advanced Object Oriented Programming Coursework 2019
-#### Release date: 11th, Mar, 2019 | Deadline: 12:00PM, 23rd, Apr, 2019
+##### Release date: 11th, Mar, 2019 | Deadline: 12:00PM, 23rd, Apr, 2019
 
 ## 1. Description
 The objective of the coursework is to develop a practical application for data processing, analysis and content search based on the object-oriented principles you learn from the CSE210 module. 
