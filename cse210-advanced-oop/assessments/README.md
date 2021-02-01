@@ -20,43 +20,37 @@
     <td>15%</td>
   </tr>
   <tr>
-    <td rowspan="3">One</td>
+    <td rowspan="7">One</td>
     <td>Task 2</td>
     <td>Efficiency and robustness, code execeution during demonstration</td>
     <td>15%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>Task 3-1</td>
     <td>data loading</td>
     <td>10%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>Task 3-2</td>
     <td>top 10 tweets</td>
     <td>10%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>Task 3-3</td>
     <td>top 10 users</td>
     <td>10%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>Task 3-4</td>
     <td>search via string matching</td>
     <td>10%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>Task 3-5</td>
     <td>full text search</td>
     <td>15%</td>
   </tr>
   <tr>
-    <td>One</td>
     <td>code modification (Task 5)</td>
     <td>see notes below</td>
     <td>-</td>
