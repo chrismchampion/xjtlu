@@ -31,6 +31,8 @@ Build you own database to record contact information (left for you to practice a
 
 ## Week 8: Oct. 28 - Nov. 3, 2019
 
+Using ```SurfaceView```, draw a bouncing ball that keeps bouncing inside the SurfaceView area. You decide how the ball bounces.
+
 
 ## Week 10: Nov. 11 - Nov. 17, 2019
 
