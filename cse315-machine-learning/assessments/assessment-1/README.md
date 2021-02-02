@@ -11,12 +11,13 @@ Loading Data ...
 
   Name        Size            Bytes  Class    Attributes
   T         150x6             29070  table
+
 Number of samples: 150
 Number of features: 6
 
 Number of rows with missing values: 18
 
-Id 4 11 20 283233475863839197102119129132138145
+Id 4 11 20 28 32 33 47 58 63 83 91 97 102 119 129 132 138 145
 
 Task 1.1 "Load data" complete. Press any key to continue.
 ```
