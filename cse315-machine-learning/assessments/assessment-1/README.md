@@ -130,67 +130,104 @@ The concrete implementation of the ID3 algorithm based on the pseudocode can be 
 
 ```
 Importing comma-separated values ...
-Found attributes: 'Outlook' 'Temperature'
-'Humidity'
-[0.2467]
-'Wind'
+
+Found attributes: 'Outlook' 'Temperature' 'Humidity' 'Wind'
+
 Begin ID3 algorithm ...
+
 Observations
 <table output redacted for space>
-Node selection (highest info gain):
+
+Node selection (highest info gain): 'Outlook'    [0.2467]
+
 Branches of Outlook:
 'Sunny'
 'Overcast'
 'Rain'
+
 Branch "Sunny":
+
 Observations
 <table output redacted for space>
+
 'Outlook'
 Outlook-->Sunny is not a leaf node.
 Node will be split and a new decision node will be created below it.
+
+
 Begin ID3 algorithm ...
+
 Observations
 <table output redacted for space>
-Node selection (highest info gain):
+
+Node selection (highest info gain): 'Humidity'    [0.9710]
+
 Branches of Humidity:
 'High'
 'Normal'
-'Humidity'
-[0.9710]
+
 Branch "High":
 
 Observations
 <table output redacted for space>
+
 Humidity-->High is a leaf node: Entropy(PlayTennis:"No") = 0.
+
+
 Branch "Normal":
+
 Observations
 <table output redacted for space>
+
 Humidity-->Normal is a leaf node: Entropy(PlayTennis:"Yes") = 0.
+
+
 Branch "Overcast":
+
 Observations
 <table output redacted for space>
+
 Outlook-->Overcast is a leaf node: Entropy(PlayTennis:"Yes") = 0.
+
+
 Branch "Rain":
+
 Observations
 <table output redacted for space>
+
 Outlook-->Rain is not a leaf node.
+
 Node will be split and a new decision node will be created below it.
+
+
 Begin ID3 algorithm ...
+
 Observations
 <table output redacted for space>
-Node selection (highest info gain):
+
+Node selection (highest info gain): 'Wind'    [0.9710]
+
 Branches of Wind:
 'Weak'
 'Strong'
-Branch "Weak":
-'Wind'    [0.9710]
 
-   Observations
-   <table output redacted for space>
+Branch "Weak":
+
+Observations
+<table output redacted for space>
+
 Wind-->Weak is a leaf node: Entropy(PlayTennis:"Yes") = 0.
-   Branch "Strong":
-   Observations
-   <table output redacted for space>
+
+
+Branch "Strong":
+
+Observations
+<table output redacted for space>
+
 Wind-->Strong is a leaf node: Entropy(PlayTennis:"No") = 0.
+
 Task 3 "Decision Tree Algorithm" complete. End of Task 3.
-The following decision tree for the ‘playtennis.csv’ dataset can be induced from the implementation:
+```
+
+The following decision tree for the ‘*playtennis.csv*’ dataset can be induced from the implementation:
+!()[img/fig-7.png]
