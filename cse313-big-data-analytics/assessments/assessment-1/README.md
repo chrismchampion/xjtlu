@@ -14,3 +14,15 @@ The six steps of the Big Data Analytics process were used as a guideline for the
 ## III. Plots Produced (30 Points)
 
 ![Graph 1](graph-1.png "Graph 1")
+
+Shows the total number of clicks made by signed-in users over the course of 21 days. Trend: Spike in clicks approx. every 7 days implies more site traffic on weekends.
+
+![Graph 2](graph-2.png "Graph 2")
+
+![Graph 3](graph-3.png "Graph 3")
+
+![Graph 4](graph-4.png "Graph 4")
+
+![Graph 5](graph-5.png "Graph 5")
+
+![Graph 6](graph-6.png "Graph 6")
