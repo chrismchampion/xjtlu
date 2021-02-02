@@ -230,4 +230,4 @@ Task 3 "Decision Tree Algorithm" complete. End of Task 3.
 ```
 
 The following decision tree for the ‘*playtennis.csv*’ dataset can be induced from the implementation:
-!()[img/fig-7.png]
+![](img/fig-7.png) 
