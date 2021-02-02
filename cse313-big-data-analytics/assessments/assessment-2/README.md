@@ -68,8 +68,7 @@ Output:
     And torture him with grievous ling'ring death.	89153
     But purgatory, torture, hell itself.	195729
     By a sharp torture.	45325
-    curses he shall have, the tortures he shall feel, will break the
-246457
+    curses he shall have, the tortures he shall feel, will break the	246457
   Do in consent shake hands to torture me,	1293
     Drawn on with torture.	45457
   FIRST SOLDIER. He calls for the tortures. What will you say without	10329
