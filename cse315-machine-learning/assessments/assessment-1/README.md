@@ -50,14 +50,24 @@ Task 1.2 "Imputation" complete. Press any key to continue.
 ### 3. Compare the results of applying each missing value strategy using some visualization method. [10 marks]
 
 For each of the flower species of the irismissing dataset, i.e., {“Iris-setosa, “Iris-versicolor”, “Iris-viginica”}, the sepal area (SepalLengthCm * SepalWidthCm) and the petal area (PetalLengthCm * PetalWidthCm) are visualized below as scatter plots.
-The following scatter plot represents the irismissing dataset with missing values removed:
-The following scatter plot represents the irismissing dataset using mean imputation to handle missing values:
- 
+
+The following scatter plot represents the *irismissing* dataset with missing values removed:
+
+![](img/fig-1.png)
+
+The following scatter plot represents the *irismissing* dataset using mean imputation to handle missing values:
+
+![](img/fig-2.png)
+
 Comparison of the resulting visualized data shows that imputing missing values using a global mean for each feature produced outliers, as highlighted in the following figure:
- 
+
+![](img/fig-3.png)
+
 The use of median imputation produced similar results as depicted above.
-Excerpt from task1.m console output:
-Task 1.3 "Visualization" complete. End of Task 1.
+
+**Excerpt from task1.m console output:**
+
+```Task 1.3 "Visualization" complete. End of Task 1.```
 
 
 ## Task 2 Decision Trees [30 Marks]
