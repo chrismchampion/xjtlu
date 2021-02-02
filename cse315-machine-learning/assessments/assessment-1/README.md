@@ -73,37 +73,27 @@ The use of median imputation produced similar results as depicted above.
 ## Task 2 Decision Trees [30 Marks]
 
 ### 1. Manually generate the decision tree for the passenger survival dataset. Use information gain as the split measure. [20 marks]
+
 Calculations for determining information gain were done by hand to manually induce the decision tree.
+
 In order to determine the tree root, first the entropy of the set was calculated by taking the sum of the frequency of each row where “Survived=Yes” (548) and where “Survived=No” (817):
-Level 1 / Root:
-8 548 817 !"##$%&'())=−-13654%561365 = 0.9718
-9:;
- !"##$%&'()@A) = 833 ∗ !"##$%&'(CD4@) + 532 ∗ !"##$%&'(G@HD4@) = 0.7814 1365 1365
-!"##$%&'(I5@) = 132 ∗ !"##$%&'(JhL4M) + 1233 ∗ !"##$%&'(IMN4##) = 0.9665
-1365
-= 349 ∗ !"##$%&'(J4DOO1) + 1365
-1365
-!"##$%&'(J4DOO)
-275 ∗ !"##$%&'(J4DOO2) + 741 ∗ !"##$%&'(J4DOO3 1365 1365
-= 0.8905
-PQRSTUVWXSQ YVXQ(Z[\) = ]QWTS^_(Z) − ]QWTS^_(Z[\) = `. ab`c; e"f%$HD##L%" gDL"(I5@) = !"##$%&'()) − !"##$%&'(I5@) = 0.0052; e"f%$HD##L%" gDL"(J4DOO) = !"##$%&'()) − !"##$%&'(J4DOO) = 0.0812
-The feature “Sex”, with the highest information gain, is selected as the tree’s root node. The remaining nodes were selected using the same method.
-Level 2:
-PQRSTUVWXSQYVXQ(Z[\hVi[, kl[) = ]QWTS^_(hVi[) − ]QWTS^_(Z[\hVi[, kl[)
-= `.`mcb;
-e"f%$HD##L%"gDL"()@ACD4@, J4DOO) = !"##$%&'(CD4@) − !"##$%&'()@ACD4@, J4DOO) = 0.0213;
- 
-PQRSTUVWXSQYVXQ(Z[\n[UVi[, oiVpp)
-= ]QWTS^_(n[UVi[) − ]QWTS^_(Z[\n[UVi[, oiVpp) = `. mmqm; e"f%$HD##L%"gDL"()@AG@HD4@, I5@)
-= !"##$%&'(G@HD4@) − !"##$%&'()@AG@HD4@, I5@) = 0.0177
+
+![](img/fig-4.png)
+![](img/fig-5.png)
+![](img/fig-6.png) 
+
 The features “Age” and “Class” are selected as decision nodes for their respective branches. Level 3:
 The entropy for male children and adults for classes where entropy is not equal to zero was calculated:
-!"##$%&'()@ACD4@, I5@JhL4M, J4DOO3) = 0.9268; !"##$%&'()@ACD4@, I5@IMN4##, J4DOO1) = 0.9141
-!"##$%&'()@ACD4@, I5@IMN4##, J4DOO2) = 0.3974; !"##$%&'()@ACD4@, I5@IMN4##, J4DOO3) = 0.6569
+
+
 The entropy for girls and women in all classes based on age where entropy is not equal to zero was calculated:
-!"##$%&'()@AG@HD4@, J4DOO1, I5@IMN4##) = 0.1511; !"##$%&'()@AG@HD4@, J4DOO2, I5@IMN4##) = 0.6759; !"##$%&'()@AG@HD4@, J4DOO3, I5@JhL4M) = 0.9894; !"##$%&'()@AG@HD4@, J4DOO3, I5@IMN4##) = 0.9998;
+
 The final decision tree below was constructed using draw.io based on calculated information gain.
-  
+
+
+
+
+
 ### 2. In the figure you can find the Tennis data from the example we used in Lecture 3 on describing the ID3 algorithm.
 2.2.1 Write a function that computes the entropy of a set S with Npos positive observations and Nneg negative observations. [10 marks]
 Excerpt from task2.m console output:
