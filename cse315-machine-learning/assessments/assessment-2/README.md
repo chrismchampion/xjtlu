@@ -56,3 +56,18 @@ matplotlib.pyplot to help visualize the training data.
 
 ![](img/fig-4.png)
 
+### 2. Using the same iris.data, reduce the dimension of features applying the PCA and extract the first, second, and third principal components. [10 marks]
+
+- Results of implementation using Scikit Learn libraries: sklearn.svm.SVC and sklearn.decomposition.PCA
+
+![](img/fig-5.png)
+![](img/fig-6.png)
+
+### 3. Using the extracted first, second, and third principal component in Task 2.2, respectively, to train an SVM model to classify the types of iris and compare their accuracies. [10 marks]
+
+Training with individual principal components delivered the following results:
+
+| PC1  | PC2 | PC3 |
+| ------------- | ------------- | ------------- |
+| 0.9111111111111111 | 0.35555555555555557 | 0.5333333333333333 |
+
