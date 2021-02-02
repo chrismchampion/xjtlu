@@ -1,6 +1,8 @@
-# Task 1 Data Pre-processing [30 Marks]
+# CSE315 Machine Learning Assignment 1
 
-## 1. Import the dataset irismissing.csv into a data frame and find the row number of each instance that has missing values. [10 marks]
+## Task 1 Data Pre-processing [30 Marks]
+
+### 1. Import the dataset irismissing.csv into a data frame and find the row number of each instance that has missing values. [10 marks]
 
 Excerpt from task1.m console output:
    Loading Data ...
@@ -11,7 +13,7 @@ Excerpt from task1.m console output:
 Number of rows with missing values: 18
 Id 41120283233475863839197102119129132138145 Task 1.1 "Load data" complete. Press any key to continue.
 
-## 2. Write a program to drop missing values, and describe other two strategies (median, mean) for handling missing values and write a function to implement these strategies. [10 marks]
+### 2. Write a program to drop missing values, and describe other two strategies (median, mean) for handling missing values and write a function to implement these strategies. [10 marks]
 
 Imputation using the mean/median values of features, i.e. table columns, can be used as a possible strategy for handling missing values. This strategy works well with small numerical datasets; however, it does not take possible relationships between features into account and should not be used on categorical features. The more computationally expensive k-nearest neighbors (kNN) algorithm can be used for increased accuracy on continuous, discrete, ordinal, and categorical data.
 Excerpt from task1.m console output:
@@ -24,7 +26,7 @@ median (SepalWidthCm) for rows [11, 28, 33, 47, 58, 63, 102, 129] = 3 median (Pe
 median (PetalWidthCm) for rows [32, 97] = 1.35
 Task 1.2 "Imputation" complete. Press any key to continue.
 
-## 3. Compare the results of applying each missing value strategy using some visualization method. [10 marks]
+### 3. Compare the results of applying each missing value strategy using some visualization method. [10 marks]
 
 For each of the flower species of the irismissing dataset, i.e., {“Iris-setosa, “Iris-versicolor”, “Iris-viginica”}, the sepal area (SepalLengthCm * SepalWidthCm) and the petal area (PetalLengthCm * PetalWidthCm) are visualized below as scatter plots.
 The following scatter plot represents the irismissing dataset with missing values removed:
@@ -37,41 +39,41 @@ Excerpt from task1.m console output:
 Task 1.3 "Visualization" complete. End of Task 1.
 
 
-# Task 2 Decision Trees [30 Marks]
+## Task 2 Decision Trees [30 Marks]
 
-## 1. Manually generate the decision tree for the passenger survival dataset. Use information gain as the split measure. [20 marks]
+### 1. Manually generate the decision tree for the passenger survival dataset. Use information gain as the split measure. [20 marks]
 Calculations for determining information gain were done by hand to manually induce the decision tree.
 In order to determine the tree root, first the entropy of the set was calculated by taking the sum of the frequency of each row where “Survived=Yes” (548) and where “Survived=No” (817):
 Level 1 / Root:
-8 548 817 !"#$%&'())=−-13654%561365 = 0.9718
+8 548 817 !"##$%&'())=−-13654%561365 = 0.9718
 9:;
- !"#$%&'()@A) = 833 ∗ !"#$%&'(CD4@) + 532 ∗ !"#$%&'(G@HD4@) = 0.7814 1365 1365
-!"#$%&'(I5@) = 132 ∗ !"#$%&'(JhL4M) + 1233 ∗ !"#$%&'(IMN4#) = 0.9665
+ !"##$%&'()@A) = 833 ∗ !"##$%&'(CD4@) + 532 ∗ !"##$%&'(G@HD4@) = 0.7814 1365 1365
+!"##$%&'(I5@) = 132 ∗ !"##$%&'(JhL4M) + 1233 ∗ !"##$%&'(IMN4##) = 0.9665
 1365
-= 349 ∗ !"#$%&'(J4DOO1) + 1365
+= 349 ∗ !"##$%&'(J4DOO1) + 1365
 1365
-!"#$%&'(J4DOO)
-275 ∗ !"#$%&'(J4DOO2) + 741 ∗ !"#$%&'(J4DOO3 1365 1365
+!"##$%&'(J4DOO)
+275 ∗ !"##$%&'(J4DOO2) + 741 ∗ !"##$%&'(J4DOO3 1365 1365
 = 0.8905
-PQRSTUVWXSQ YVXQ(Z[\) = ]QWTS^_(Z) − ]QWTS^_(Z[\) = `. ab`c; e"f%$HD#L%" gDL"(I5@) = !"#$%&'()) − !"#$%&'(I5@) = 0.0052; e"f%$HD#L%" gDL"(J4DOO) = !"#$%&'()) − !"#$%&'(J4DOO) = 0.0812
+PQRSTUVWXSQ YVXQ(Z[\) = ]QWTS^_(Z) − ]QWTS^_(Z[\) = `. ab`c; e"f%$HD##L%" gDL"(I5@) = !"##$%&'()) − !"##$%&'(I5@) = 0.0052; e"f%$HD##L%" gDL"(J4DOO) = !"##$%&'()) − !"##$%&'(J4DOO) = 0.0812
 The feature “Sex”, with the highest information gain, is selected as the tree’s root node. The remaining nodes were selected using the same method.
 Level 2:
 PQRSTUVWXSQYVXQ(Z[\hVi[, kl[) = ]QWTS^_(hVi[) − ]QWTS^_(Z[\hVi[, kl[)
 = `.`mcb;
-e"f%$HD#L%"gDL"()@ACD4@, J4DOO) = !"#$%&'(CD4@) − !"#$%&'()@ACD4@, J4DOO) = 0.0213;
+e"f%$HD##L%"gDL"()@ACD4@, J4DOO) = !"##$%&'(CD4@) − !"##$%&'()@ACD4@, J4DOO) = 0.0213;
  
 PQRSTUVWXSQYVXQ(Z[\n[UVi[, oiVpp)
-= ]QWTS^_(n[UVi[) − ]QWTS^_(Z[\n[UVi[, oiVpp) = `. mmqm; e"f%$HD#L%"gDL"()@AG@HD4@, I5@)
-= !"#$%&'(G@HD4@) − !"#$%&'()@AG@HD4@, I5@) = 0.0177
+= ]QWTS^_(n[UVi[) − ]QWTS^_(Z[\n[UVi[, oiVpp) = `. mmqm; e"f%$HD##L%"gDL"()@AG@HD4@, I5@)
+= !"##$%&'(G@HD4@) − !"##$%&'()@AG@HD4@, I5@) = 0.0177
 The features “Age” and “Class” are selected as decision nodes for their respective branches. Level 3:
 The entropy for male children and adults for classes where entropy is not equal to zero was calculated:
-!"#$%&'()@ACD4@, I5@JhL4M, J4DOO3) = 0.9268; !"#$%&'()@ACD4@, I5@IMN4#, J4DOO1) = 0.9141
-!"#$%&'()@ACD4@, I5@IMN4#, J4DOO2) = 0.3974; !"#$%&'()@ACD4@, I5@IMN4#, J4DOO3) = 0.6569
+!"##$%&'()@ACD4@, I5@JhL4M, J4DOO3) = 0.9268; !"##$%&'()@ACD4@, I5@IMN4##, J4DOO1) = 0.9141
+!"##$%&'()@ACD4@, I5@IMN4##, J4DOO2) = 0.3974; !"##$%&'()@ACD4@, I5@IMN4##, J4DOO3) = 0.6569
 The entropy for girls and women in all classes based on age where entropy is not equal to zero was calculated:
-!"#$%&'()@AG@HD4@, J4DOO1, I5@IMN4#) = 0.1511; !"#$%&'()@AG@HD4@, J4DOO2, I5@IMN4#) = 0.6759; !"#$%&'()@AG@HD4@, J4DOO3, I5@JhL4M) = 0.9894; !"#$%&'()@AG@HD4@, J4DOO3, I5@IMN4#) = 0.9998;
+!"##$%&'()@AG@HD4@, J4DOO1, I5@IMN4##) = 0.1511; !"##$%&'()@AG@HD4@, J4DOO2, I5@IMN4##) = 0.6759; !"##$%&'()@AG@HD4@, J4DOO3, I5@JhL4M) = 0.9894; !"##$%&'()@AG@HD4@, J4DOO3, I5@IMN4##) = 0.9998;
 The final decision tree below was constructed using draw.io based on calculated information gain.
   
-## 2. In the figure you can find the Tennis data from the example we used in Lecture 3 on describing the ID3 algorithm.
+### 2. In the figure you can find the Tennis data from the example we used in Lecture 3 on describing the ID3 algorithm.
 2.2.1 Write a function that computes the entropy of a set S with Npos positive observations and Nneg negative observations. [10 marks]
 Excerpt from task2.m console output:
    Positive observations: 9
@@ -90,9 +92,9 @@ Excerpt from task2.m console output:
    'Wind'           [0.0481]
 Root node selection (max. information gain): Outlook Task 2.2.3 "Root Node selection" complete. End of Task 2.
 
-# Task 3 Decision Tree Algorithm [20 Marks]
+## Task 3 Decision Tree Algorithm [20 Marks]
 
-## 1. Implement the ID3 decision tree from the pseudocode (recursive algorithm) below and induce/learn the tree from the data in the figure of Task 2.2 (see above).
+### 1. Implement the ID3 decision tree from the pseudocode (recursive algorithm) below and induce/learn the tree from the data in the figure of Task 2.2 (see above).
 The concrete implementation of the ID3 algorithm based on the pseudocode can be found in function “ID3.m” and is called from the script “task3.m”.
 Excerpt from task3.m console output:
    Importing comma-separated values ...
