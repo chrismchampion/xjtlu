@@ -24,16 +24,28 @@ Task 1.1 "Load data" complete. Press any key to continue.
 
 ### 2. Write a program to drop missing values, and describe other two strategies (median, mean) for handling missing values and write a function to implement these strategies. [10 marks]
 
-Imputation using the mean/median values of features, i.e. table columns, can be used as a possible strategy for handling missing values. This strategy works well with small numerical datasets; however, it does not take possible relationships between features into account and should not be used on categorical features. The more computationally expensive k-nearest neighbors (kNN) algorithm can be used for increased accuracy on continuous, discrete, ordinal, and categorical data.
-Excerpt from task1.m console output:
+Imputation using the mean/median values of features, i.e. table columns, can be used as a possible strategy for handling missing values. This strategy works well with small numerical datasets; however, it does not take possible relationships between features into account and should not be used on categorical features. The more computationally expensive *k-nearest neighbors* (kNN) algorithm can be used for increased accuracy on continuous, discrete, ordinal, and categorical data.
+
+**Excerpt from task1.m console output:**
+
+```
 Rows containing NaN successfully removed.
 Number of rows with missing values in transformed table: 0
+
 Handling missing values with mean imputation:
-mean(SepalLengthCm) for rows [20, 119, 138] = 5.8462 mean(SepalWidthCm) for rows [11, 28, 33, 47, 58, 63, 102, 129] = 3.0424 mean(PetalLengthCm) for rows [4, 83, 91, 132, 145] = 3.7742 mean(PetalWidthCm) for rows [32, 97] = 1.2114
-Handling missing values with median imputation: median(SepalLengthCm) for rows [20, 119, 138] = 5.8
-median (SepalWidthCm) for rows [11, 28, 33, 47, 58, 63, 102, 129] = 3 median (PetalLengthCm) for rows [4, 83, 91, 132, 145] = 4.4
+mean(SepalLengthCm) for rows [20, 119, 138] = 5.8462
+mean(SepalWidthCm) for rows [11, 28, 33, 47, 58, 63, 102, 129] = 3.0424
+mean(PetalLengthCm) for rows [4, 83, 91, 132, 145] = 3.7742
+mean(PetalWidthCm) for rows [32, 97] = 1.2114
+
+Handling missing values with median imputation:
+median(SepalLengthCm) for rows [20, 119, 138] = 5.8
+median (SepalWidthCm) for rows [11, 28, 33, 47, 58, 63, 102, 129] = 3
+median (PetalLengthCm) for rows [4, 83, 91, 132, 145] = 4.4
 median (PetalWidthCm) for rows [32, 97] = 1.35
+
 Task 1.2 "Imputation" complete. Press any key to continue.
+```
 
 ### 3. Compare the results of applying each missing value strategy using some visualization method. [10 marks]
 
