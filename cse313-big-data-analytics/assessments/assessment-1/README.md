@@ -12,3 +12,5 @@ The six steps of the Big Data Analytics process were used as a guideline for the
 ## II. Source Code (50 Marks)
 
 ## III. Plots Produced (30 Points)
+
+![Graph 1](graph-1.png "Graph 1")
