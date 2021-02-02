@@ -1,5 +1,17 @@
 # CSE313 Big Data Analytics Assessment 2
 
+## Project
+
+The purpose of this lab practice is to get you start using Hadoop. It provides a chance for you to experience how an analysis can be done on a computer cluster using advanced platform and programming model. You need to look at what we have done and simulate it to write, compile, debug MapReduce program (development phase) and execute a simple Hadoop Job on Cluster which deploys a Hadoop platform. You need writing MapReduce (Java) program in Eclipse and test/debug it, finally compile it to produce a Jar file. One you have a jar file for your job, you can submit your job to a Hadoop cluster (simulate) to get it run on the cluster and have your analysis results.  
+
+## Tasks
+
+You are given a dataset (pg100.txt, which is a book “THE SONNETS” by William Shakespeare), you are asked to write your own MapReduce program to accomplish the following task:
+
+- Output only the top 10 most common bigram (pair of adjacent words) in the given dataset, what are they and how many appearances?
+- Output only the lines that contain the word ‘torture’. 
+
+
 ## 1. My results files:
 
 - File 1: top 10 bigram and occurrences = “Bigram.java”
