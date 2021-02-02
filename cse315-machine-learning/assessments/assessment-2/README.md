@@ -10,8 +10,8 @@ Selected classification algorithms:
 
 ![](img/fig-1.png)
 
-### 2. **Convolutional Neural Network (CNN)** classification written in Python utilizing Tensorflow with Keras library: keras.layers.Conv2D
+2. **Convolutional Neural Network (CNN)** classification written in Python utilizing Tensorflow with Keras library: keras.layers.Conv2D
 
 ![](img/fig-2.png)
 
-###2. Describe the techniques, including data preparation, feature reduction, and training tricks in your classification algorithms. [10 marks]
+### 2. Describe the techniques, including data preparation, feature reduction, and training tricks in your classification algorithms. [10 marks]
