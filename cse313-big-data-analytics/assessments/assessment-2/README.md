@@ -1,18 +1,18 @@
 # CSE313 Big Data Analytics Assessment 2
 
-### 1. My results files:
+## 1. My results files:
 
 - File 1: top 10 bigram and occurrences = “Bigram.java”
 - File 2: the single line contains “torture” = “Torture.java”
 
-### 2. My code with comments:
+## 2. My code with comments:
 
 ```Bigram.java```
 ```Torture.java```
 
-### 3. Hadoop command list and order used to run job and obtain results:
+## 3. Hadoop command list and order used to run job and obtain results:
 
-#### Bigram
+### Bigram
 
 1. Copy the test file from local storage to HDFS.
 
@@ -43,5 +43,5 @@ and the	677
 of my	671
 ```
 
-#### Torture
+### Torture
 
