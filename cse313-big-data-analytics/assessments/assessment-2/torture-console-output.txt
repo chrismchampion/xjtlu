@@ -1,0 +1,115 @@
+[cloudera@localhost ~]$ hadoop jar torture.jar edu.xjtlu.cse313.torture.Torture pg100.txt home/cloudera/cchamp17
+[pg100.txt, home/cloudera/cchamp17]
+[pg100.txt, home/cloudera/cchamp17]
+19/11/14 20:24:47 INFO client.RMProxy: Connecting to ResourceManager at localhost.localdomain/127.0.0.1:8032
+19/11/14 20:24:48 INFO input.FileInputFormat: Total input paths to process : 1
+19/11/14 20:24:48 INFO mapreduce.JobSubmitter: number of splits:1
+19/11/14 20:24:48 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1572581490555_0014
+19/11/14 20:24:48 INFO impl.YarnClientImpl: Submitted application application_1572581490555_0014
+19/11/14 20:24:48 INFO mapreduce.Job: The url to track the job: http://localhost.localdomain:8088/proxy/application_1572581490555_0014/
+19/11/14 20:24:48 INFO mapreduce.Job: Running job: job_1572581490555_0014
+19/11/14 20:24:54 INFO mapreduce.Job: Job job_1572581490555_0014 running in uber mode : false
+19/11/14 20:24:54 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/14 20:24:59 INFO mapreduce.Job:  map 100% reduce 0%
+19/11/14 20:25:05 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/14 20:25:05 INFO mapreduce.Job: Job job_1572581490555_0014 completed successfully
+19/11/14 20:25:06 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=1699
+		FILE: Number of bytes written=187779
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=5590011
+		HDFS: Number of bytes written=2244
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=942080
+		Total time spent by all reduces in occupied slots (ms)=819200
+		Total time spent by all map tasks (ms)=3680
+		Total time spent by all reduce tasks (ms)=3200
+		Total vcore-seconds taken by all map tasks=3680
+		Total vcore-seconds taken by all reduce tasks=3200
+		Total megabyte-seconds taken by all map tasks=942080
+		Total megabyte-seconds taken by all reduce tasks=819200
+	Map-Reduce Framework
+		Map input records=249575
+		Map output records=41
+		Map output bytes=2145
+		Map output materialized bytes=1695
+		Input split bytes=122
+		Combine input records=41
+		Combine output records=41
+		Reduce input groups=41
+		Reduce shuffle bytes=1695
+		Reduce input records=41
+		Reduce output records=41
+		Spilled Records=82
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=84
+		CPU time spent (ms)=1870
+		Physical memory (bytes) snapshot=463446016
+		Virtual memory (bytes) snapshot=1809391616
+		Total committed heap usage (bytes)=350748672
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5589889
+	File Output Format Counters 
+		Bytes Written=2244
+[cloudera@localhost ~]$ hadoop fs -cat home/cloudera/cchamp17/part* | sort -n
+    All length is torture. Since the torch is out,	18811
+    And torture him with grievous ling'ring death.	89153
+    But purgatory, torture, hell itself.	195729
+    By a sharp torture.	45325
+    curses he shall have, the tortures he shall feel, will break the	246457
+  Do in consent shake hands to torture me,	1293
+    Drawn on with torture.	45457
+  FIRST SOLDIER. He calls for the tortures. What will you say without	10329
+    For torturers ingenious. It is I	46991
+    From thee to die were torture more than death.	89471
+  GEORGE. While we devise fell tortures for thy faults.	95267
+    hand, to th' infernal deep, with Erebus and tortures vile also.	66211
+    He may at pleasure whip or hang or torture,	17465
+  IACHIMO. Thou'lt torture me to leave unspoken that	46827
+    In leads or oils? What old or newer torture	243789
+    I play the torturer, by small and small	179475
+  Is't not enough to torture me alone,	4855
+    Let hell want pains enough to torture me!	111615
+    O happy torment, when my torturer	148315
+    On pain of torture, from those bloody hands	191899
+    On thy soul's peril and thy body's torture,	243199
+  OTHELLO. If thou dost slander her and torture me,	172377
+    O, torture me no more! I will confess.	89537
+    Refuse me, hate me, torture me to death!	166279
+  Rom. 'Tis torture, and not mercy. Heaven is here,	195751
+    Say he be taken, rack'd, and tortured;	88565
+  SHYLOCK. I am very glad of it; I'll plague him, I'll torture him; I	148195
+  SHYLOCK. Out upon her! Thou torturest me, Tubal. It was my	148203
+    Strange tortures for offenders, never heard of,	88049
+    Than on the torture of the mind to lie	135863
+    That same Berowne I'll torture ere I go.	131159
+    That so her torture may be shortened.	84399
+    then torture my wife, pluck the borrowed veil of modesty	154227
+    The time, the place, the torture. O, enforce it!	175867
+    This torture should be roar'd in dismal hell.	195463
+    To torture thee the more, being what thou art.	189129
+    Turning dispiteous torture out of door!	110457
+    Which is our honour, bitter torture shall	46813
+    Which to be spoke would torture thee.	46829
+    With vilest torture let my life be ended.	7327
+    You go about to torture me in vain.	86929
+[cloudera@localhost ~]$ 
+
