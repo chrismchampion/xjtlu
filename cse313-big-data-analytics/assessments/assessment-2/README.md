@@ -26,3 +26,22 @@
 
 ```$HADOOP_HOME/bin/hadoop fs -cat home/cloudera/cchamp17/part* | sort -n -k3 -r | head -n10```
 
+Output:
+
+```
+$ [cloudera@localhost ~]$ hadoop fs -cat home/cloudera/cchamp17/part* | sort -n -k3 -r | head -n10
+
+I am	1714
+in the	1523
+I have	1507
+of the	1435
+I will	1416
+to the	1295
+to be	768
+I do	724
+and the	677
+of my	671
+```
+
+#### Torture
+
