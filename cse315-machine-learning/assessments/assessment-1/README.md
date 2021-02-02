@@ -82,43 +82,54 @@ In order to determine the tree root, first the entropy of the set was calculated
 ![](img/fig-5.png)
 ![](img/fig-6.png) 
 
-The features “Age” and “Class” are selected as decision nodes for their respective branches. Level 3:
-The entropy for male children and adults for classes where entropy is not equal to zero was calculated:
-
-
-The entropy for girls and women in all classes based on age where entropy is not equal to zero was calculated:
-
-The final decision tree below was constructed using draw.io based on calculated information gain.
-
-
-
-
-
 ### 2. In the figure you can find the Tennis data from the example we used in Lecture 3 on describing the ID3 algorithm.
-2.2.1 Write a function that computes the entropy of a set S with Npos positive observations and Nneg negative observations. [10 marks]
-Excerpt from task2.m console output:
-   Positive observations: 9
-   Negative observations: 5
-   Entropy of set: 0.940286
+
+#### 2.2.1 Write a function that computes the entropy of a set S with Npos positive observations and Nneg negative observations. [10 marks]
+
+**Excerpt from task2.m console output:**
+
+```
+Positive observations: 9
+Negative observations: 5
+Entropy of set: 0.940286
+
 Task 2.2.1 "Entropy function" complete. Press any key to continue.
-2.2.2 Write a function that takes input as a set S of observations and an attribute A from these observations, and calculates the information gain denoted as Gain(S,A), as if we were to split on that attribute in the context of the ID3 decision tree algorithm. [10 marks]
+```
+
+#### 2.2.2 Write a function that takes input as a set S of observations and an attribute A from these observations, and calculates the information gain denoted as Gain(S,A), as if we were to split on that attribute in the context of the ID3 decision tree algorithm. [10 marks]
+
 Created functions “meanImputation.m” and “medianImputation.m” which are called in this section of the program with output used in the following section “Task 2.2.3”.
-Excerpt from task2.m console output:
-Task 2.2.2 "Information Gain function" complete. Press any key to continue.
-2.2.3 Estimate the information gain of all the attributes. Which one will you choose for the root node of your decision tree? [10 marks]
-Excerpt from task2.m console output:
-   'Outlook'        [0.2467]
-   'Temperature'    [0.0292]
-   'Humidity'       [0.1518]
-   'Wind'           [0.0481]
-Root node selection (max. information gain): Outlook Task 2.2.3 "Root Node selection" complete. End of Task 2.
+
+**Excerpt from task2.m console output:**
+
+```Task 2.2.2 "Information Gain function" complete. Press any key to continue.```
+
+#### 2.2.3 Estimate the information gain of all the attributes. Which one will you choose for the root node of your decision tree? [10 marks]
+
+**Excerpt from task2.m console output:**
+
+```
+'Outlook'        [0.2467]
+'Temperature'    [0.0292]
+'Humidity'       [0.1518]
+'Wind'           [0.0481]
+
+Root node selection (max. information gain): Outlook
+
+Task 2.2.3 "Root Node selection" complete. End of Task 2.
+```
+
 
 ## Task 3 Decision Tree Algorithm [20 Marks]
 
 ### 1. Implement the ID3 decision tree from the pseudocode (recursive algorithm) below and induce/learn the tree from the data in the figure of Task 2.2 (see above).
+
 The concrete implementation of the ID3 algorithm based on the pseudocode can be found in function “ID3.m” and is called from the script “task3.m”.
-Excerpt from task3.m console output:
-   Importing comma-separated values ...
+
+**Excerpt from task3.m console output:**
+
+```
+Importing comma-separated values ...
 Found attributes: 'Outlook' 'Temperature'
 'Humidity'
 [0.2467]
