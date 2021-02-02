@@ -4,14 +4,22 @@
 
 ### 1. Import the dataset irismissing.csv into a data frame and find the row number of each instance that has missing values. [10 marks]
 
-Excerpt from task1.m console output:
-   Loading Data ...
-     Name        Size            Bytes  Class    Attributes
-     T         150x6             29070  table
-   Number of samples: 150
-   Number of features: 6
+**Excerpt from task1.m console output:**
+
+```
+Loading Data ...
+
+  Name        Size            Bytes  Class    Attributes
+  T         150x6             29070  table
+Number of samples: 150
+Number of features: 6
+
 Number of rows with missing values: 18
-Id 41120283233475863839197102119129132138145 Task 1.1 "Load data" complete. Press any key to continue.
+
+Id 4 11 20 283233475863839197102119129132138145
+
+Task 1.1 "Load data" complete. Press any key to continue.
+```
 
 ### 2. Write a program to drop missing values, and describe other two strategies (median, mean) for handling missing values and write a function to implement these strategies. [10 marks]
 
