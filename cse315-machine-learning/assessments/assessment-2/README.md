@@ -67,7 +67,31 @@ matplotlib.pyplot to help visualize the training data.
 
 Training with individual principal components delivered the following results:
 
-| PC1  | PC2 | PC3 |
+| PC1 | PC2 | PC3 |
 | ------------- | ------------- | ------------- |
 | 0.9111111111111111 | 0.35555555555555557 | 0.5333333333333333 |
 
+### 4. For each combination of the extracted first, second, and third principal components, train an SVM model to classify the types of iris, and then compare their accuracies. [10 marks]
+
+Training with composite principal components delivered the following results:
+
+| PC1 * PC2 | PC1 * PC3 | PC2 * PC3 |
+| ------------- | ------------- | ------------- |
+| 1.0 | 0.9777777777777777 | 0.3111111111111111 |
+
+## Task 3 Clustering [25 Marks]
+
+### 1. Specify the number of clustering (e.g., 1, 2, 3, 4, 5, and 6) and implement the k-means algorithm (based on
+public packages or libraries) to classify the iris.data. [10 marks]
+
+- Results of implementation using Scikit Learn library: sklearn.cluster.Kmeans
+
+![](img/fig-7-8.png)
+![](img/fig-9-10.png)
+![](img/fig-11-12.png)
+
+### 2. Apply the PCA to reduce the dimension of features and combine the first, second, and third principal components to implement the k-means algorithm (based on public packages or libraries) to classify the iris.data. [15 marks]
+
+- Results of implementation using Scikit Learn libraries: sklearn.cluster.Kmeans and sklearn.decomposition.PCA
+
+![](img/fig-13.png)
