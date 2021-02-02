@@ -19,10 +19,24 @@ Shows the total number of clicks made by signed-in users over the course of 21 d
 
 ![Graph 2](graph-2.png "Graph 2")
 
+Shows the number of signed-in users (by gender) who clicked ads.
+Trend: Male/Female clicks similar overall; spike in clicks approx. every 7 days as above.
+
 ![Graph 3](graph-3.png "Graph 3")
+
+Shows the number of signed-in users (by age group) who clicked ads.
+Trend: Users (min. age) 3-29 and 60+ are largest site demographic; weekly click spike.
 
 ![Graph 4](graph-4.png "Graph 4")
 
+Shows the number of signed-in users (60+) who clicked ads over the course of 21 days.
+Trend: Same weekly click spike but significantly higher number of clicks by gender in this age demographic when compared to overall.
+
 ![Graph 5](graph-5.png "Graph 5")
 
+Represents the click-through-rate (CTR=#Clicks/Impressions) of ads over the course of 21 days categorized by age group.
+
 ![Graph 6](graph-6.png "Graph 6")
+
+Demonstrates total number of clicks from both signed-in and not signed-in users.
+Clear representation of the weekly spike in user ad clicks implying increased site traffic on weekends.
